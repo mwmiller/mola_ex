@@ -14,9 +14,9 @@ defmodule Mola do
   As long as the cards to hand selection rules are the same, the evaluators should work for
   less popular variants.
 
-  - `best_five_card_high` for games with only personal cards.
-  - `best_holdem_high` for games with selection among all community and personal cards
-  - `best_omaha_high` for games with 3 board and 2 personal cards
+  - Omit community cards for games with only personal cards.
+  - :holdem for games with selection among all community and personal cards
+  - :omaha for games with 3 board and 2 personal cards
 
   As such, wider boards (with 6 community cards), Pineapple-style (3 personal card
   hold 'em), 8-card stud, and Big-O-ish high (5 personal card Omaha) are all supported.
@@ -26,59 +26,52 @@ defmodule Mola do
   @doc """
   Compare 5 card high poker hands from all personal cards
   Selects best 5 cards for each player and then orders players
-  Supply a list of {description, cards} tuples for comparison 
+  Supply:
+    - a list of {description, cards} tuples for comparison
+    - a list of community cards, if applicable.
+    - a selection strategy atom (:holdem or :omaha)
 
   Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
 
   ## Examples
 
-  iex> Mola.best_five_card_high([{"P1", "2c 3c 4c 5c 7s"}, {"P2", "2s 3s 4s 5s 6c"}, {"P3", "Ac As 7h 7c Kc"}])
+  # Defaults to all personal cards
+  iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s"}, {"P2", "2s 3s 4s 5s 6c"}, {"P3", "Ac As 7h 7c Kc"}])
   [
     {"P2", 1608, :six_high_straight},
     {"P3", 2534, :aces_and_sevens},
     {"P1", 7462, :seven_high}
   ]
-  iex> Mola.best_five_card_high([{"P1", "2c 3c 4c 5c 7s 5d"}, {"P2", "2s 3s 4s 5s 6c Ks"}, {"P3", "Ac As 7h 7c Kc 7d"}])
+  iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s 5d"}, {"P2", "2s 3s 4s 5s 6c Ks"}, {"P3", "Ac As 7h 7c Kc 7d"}])
   [
     {"P3", 251, :sevens_full_over_aces},
     {"P2", 1144, :king_high_flush},
     {"P1", 5519, :pair_of_fives}
   ]
+  # Defaults to :holdem
+  iex> Mola.ranked_high_hands([{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}], "Ac 2c 3h Td 3c")
+  [
+    {"BB", 10, :five_high_straight_flush},
+    {"CO", 143, :four_treys},
+    {"UTG", 177, :aces_full_over_treys}
+  ]
+  iex> Mola.ranked_high_hands([{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}], "Ac 2c Td Jd 3c", :omaha)
+  [
+    {"CO", 655, :ace_high_flush},
+    {"BB", 746, :ace_high_flush},
+    {"UTG", 1631, :three_aces}
+  ]
   """
-  def best_five_card_high(hands) do
+  def ranked_high_hands(hands, community \\ [], selection \\ :holdem)
+
+  def ranked_high_hands(hands, [], _) do
     hands
     |> Enum.map(&normalize_hand/1)
     |> Enum.map(&best5ofpile/1)
     |> Enum.sort_by(&elem(&1, 1))
   end
 
-  defp best5ofpile({desc, pile}) do
-    [best | _] =
-      comb(5, pile)
-      |> Enum.map(fn h -> Mola.PokerHigh525.rank_tuple({desc, h}) end)
-      |> Enum.reject(fn h -> h == :error end)
-      |> Enum.sort_by(&elem(&1, 1))
-
-    best
-  end
-
-  @doc """
-  Compare hold 'em hands built from community and personal cards
-  Selects best 5 cards for each player and then orders players
-  Supply a community cards and list of {description, cards} tuples for comparison 
-
-  Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
-
-  ## Examples
-
-  iex> Mola.best_holdem_high("Ac 2c 3h Td 3c", [{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}])
-  [
-    {"BB", 10, :five_high_straight_flush},
-    {"CO", 143, :four_treys},
-    {"UTG", 177, :aces_full_over_treys}
-  ]
-  """
-  def best_holdem_high(community, hands) do
+  def ranked_high_hands(hands, community, :holdem) do
     {_, common} = normalize_hand({"community", community})
 
     hands
@@ -86,26 +79,10 @@ defmodule Mola do
       {desc, cards} = normalize_hand(h)
       {desc, cards ++ common}
     end)
-    |> best_five_card_high
+    |> ranked_high_hands
   end
 
-  @doc """
-  Compare Omaha high hands built from community and personal cards
-  Selects best 5 cards for each player and then orders players
-  Supply a community cards and list of {description, cards} tuples for comparison 
-
-  Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
-
-  ## Examples
-
-  iex> Mola.best_omaha_high("Ac 2c Td Jd 3c", [{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}])
-  [
-    {"CO", 655, :ace_high_flush},
-    {"BB", 746, :ace_high_flush},
-    {"UTG", 1631, :three_aces}
-  ]
-  """
-  def best_omaha_high(community, hands) do
+  def ranked_high_hands(hands, community, :omaha) do
     {_, common} = normalize_hand({"community", community})
     common_poss = comb(3, common)
 
@@ -117,12 +94,21 @@ defmodule Mola do
         common_poss
         |> build_full(comb(2, cards))
         |> Enum.map(fn p -> {desc, p} end)
-        |> best_five_card_high
+        |> ranked_high_hands
 
       best
     end)
-    |> Enum.reject(fn h -> h == :error end)
     |> Enum.sort_by(&elem(&1, 1))
+  end
+
+  defp best5ofpile({desc, pile}) do
+    [best | _] =
+      comb(5, pile)
+      |> Enum.map(fn h -> Mola.PokerHigh525.rank_tuple({desc, h}) end)
+      |> Enum.reject(fn h -> h == :error end)
+      |> Enum.sort_by(&elem(&1, 1))
+
+    best
   end
 
   defp normalize_hand({_, hand} = full) when is_list(hand), do: full
