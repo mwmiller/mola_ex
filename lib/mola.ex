@@ -8,6 +8,8 @@ defmodule Mola do
 
   Cards should be a string: "Ac Kc Qc Jc Tc"
       or a list of tuples: [{"A", "c"}, {"K", "c"}, {"Q", "c"}, {"J", "c"}, {"T", "c"}]
+
+  Hands which cannot be evaluated are silently stripped from the results
   """
 
   @doc """
@@ -43,9 +45,37 @@ defmodule Mola do
     [best | _] =
       comb(5, pile)
       |> Enum.map(fn h -> Mola.PokerHigh525.rank_tuple({desc, h}) end)
+      |> Enum.reject(fn h -> h == :error end)
       |> Enum.sort_by(&elem(&1, 1))
 
     best
+  end
+
+  @doc """
+  Compare hold 'em hands built from community and personal cards
+  Selects best 5 cards for each player and then orders players
+  Supply a community cards and list of {description, cards} tuples for comparison 
+
+  Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
+
+  ## Examples
+
+  iex> Mola.best_holdem_high("Ac 2c 3h Td 3c", [{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}])
+  [
+    {"BB", 10, :five_high_straight_flush},
+    {"CO", 143, :four_treys},
+    {"UTG", 177, :aces_full_over_treys}
+  ]
+  """
+  def best_holdem_high(community, hands) do
+    {_, common} = normalize_hand({"community", community})
+
+    hands
+    |> Enum.map(fn h ->
+      {desc, cards} = normalize_hand(h)
+      {desc, cards ++ common}
+    end)
+    |> best_five_card_high
   end
 
   defp normalize_hand({_, hand} = full) when is_list(hand), do: full
