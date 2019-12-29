@@ -78,6 +78,42 @@ defmodule Mola do
     |> best_five_card_high
   end
 
+  @doc """
+  Compare Omaha high hands built from community and personal cards
+  Selects best 5 cards for each player and then orders players
+  Supply a community cards and list of {description, cards} tuples for comparison 
+
+  Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
+
+  ## Examples
+
+  iex> Mola.best_omaha_high("Ac 2c Td Jd 3c", [{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}])
+  [
+    {"CO", 655, :ace_high_flush},
+    {"BB", 746, :ace_high_flush},
+    {"UTG", 1631, :three_aces}
+  ]
+  """
+  def best_omaha_high(community, hands) do
+    {_, common} = normalize_hand({"community", community})
+    common_poss = comb(3, common)
+
+    hands
+    |> Enum.map(fn h ->
+      {desc, cards} = normalize_hand(h)
+
+      [best | _] =
+        common_poss
+        |> build_full(comb(2, cards))
+        |> Enum.map(fn p -> {desc, p} end)
+        |> best_five_card_high
+
+      best
+    end)
+    |> Enum.reject(fn h -> h == :error end)
+    |> Enum.sort_by(&elem(&1, 1))
+  end
+
   defp normalize_hand({_, hand} = full) when is_list(hand), do: full
 
   defp normalize_hand({desc, hand}) when is_binary(hand) do
@@ -95,4 +131,13 @@ defmodule Mola do
   def comb(m, [h | t]) do
     for(l <- comb(m - 1, t), do: [h | l]) ++ comb(m, t)
   end
+
+  def build_full(first, second, acc \\ [])
+  def build_full([], _, acc), do: acc
+  def build_full(_, [], acc), do: acc
+  def build_full([h | t], all, acc), do: build_full(t, all, acc ++ build_item(all, h, []))
+
+  def build_item([], _, acc), do: acc
+  def build_item(_, [], acc), do: acc
+  def build_item([h | t], i, acc), do: build_item(t, i, acc ++ [h ++ i])
 end

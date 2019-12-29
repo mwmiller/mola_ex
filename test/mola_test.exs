@@ -40,4 +40,24 @@ defmodule MolaTest do
     assert Mola.best_holdem_high("Ac 9d 6s 5h 2s", [{"hero", "As Js"}, {"villian", "Ad Kh"}]) ==
              [{"villian", 3355, :pair_of_aces}, {"hero", 3436, :pair_of_aces}]
   end
+
+  test "omaha high" do
+    assert Mola.best_omaha_high("Ac Kc Qc Jc Tc", [
+             {"hero", "9c 8c As Jh"},
+             {"villian", "Ad Ah Kd Kh"}
+           ]) ==
+             [{"hero", 3, :queen_high_straight_flush}, {"villian", 1600, :ace_high_straight}]
+
+    assert Mola.best_omaha_high("Ac Kc Qc Jc Jh", [
+             {"hero", "Jd Js Qs Qd"},
+             {"villian", "Ad Ah Tc 9c"}
+           ]) ==
+             [{"villian", 2, :king_high_straight_flush}, {"hero", 47, :four_jacks}]
+
+    assert Mola.best_omaha_high("Ac 9d 6s 5h 2s", [
+             {"hero", "As Js 8c 7d"},
+             {"villian", "Ad Kh 3c 4h"}
+           ]) ==
+             [{"hero", 1605, :nine_high_straight}, {"villian", 1608, :six_high_straight}]
+  end
 end
