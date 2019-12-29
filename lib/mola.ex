@@ -10,6 +10,17 @@ defmodule Mola do
       or a list of tuples: [{"A", "c"}, {"K", "c"}, {"Q", "c"}, {"J", "c"}, {"T", "c"}]
 
   Hands which cannot be evaluated are silently stripped from the results
+
+  As long as the cards to hand selection rules are the same, the evaluators should work for
+  less popular variants.
+
+  - `best_five_card_high` for games with only personal cards.
+  - `best_holdem_high` for games with selection among all community and personal cards
+  - `best_omaha_high` for games with 3 board and 2 personal cards
+
+  As such, wider boards (with 6 community cards), Pineapple-style (3 personal card
+  hold 'em), 8-card stud, and Big-O-ish high (5 personal card Omaha) are all supported.
+  Community card (board) games can even vary both.
   """
 
   @doc """
