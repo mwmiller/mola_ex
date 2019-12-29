@@ -33,16 +33,7 @@ defmodule Mola.PokerHigh525 do
 
   def rank(_), do: :error
 
-  def rank_tuple({desc, cards}) when is_binary(cards) do
-    hand =
-      cards
-      |> String.split(" ", trim: true)
-      |> Enum.map(fn s -> s |> String.split("", trim: true) |> List.to_tuple() end)
-
-    rank_tuple({desc, hand})
-  end
-
-  def rank_tuple({desc, cards}) when is_list(cards) do
+  def rank_tuple({desc, cards}) do
     {rank, hand} = cards |> Enum.sort_by(&elem(&1, 0)) |> rank()
     {desc, rank, hand}
   end
