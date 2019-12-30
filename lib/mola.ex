@@ -27,7 +27,7 @@ defmodule Mola do
     - a list of community cards, if applicable.
     - an options keyword list:
       - hand_selection: (:any, :omaha), defaults to :any
-      - deck: (:standard, :shortdeck), defaults to :standard
+      - deck: (:standard, :short), defaults to :standard
 
   Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
 
@@ -59,7 +59,7 @@ defmodule Mola do
     {"BB", 746, :ace_high_flush},
     {"UTG", 1631, :three_aces}
   ]
-  iex(2)> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "Ad Ah"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :shortdeck)
+  iex(2)> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "Ad Ah"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :short)
   [
     {"BB", 6, :nine_high_straight_flush},
     {"CO", 55, :four_eights},

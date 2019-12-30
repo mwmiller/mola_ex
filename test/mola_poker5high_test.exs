@@ -29,23 +29,23 @@ defmodule MolaPoker5HighTest do
              {1598, :seven_high_flush}
   end
 
-  test "proper rank shortdeck" do
-    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"9", "s"}, {"A", "s"}], :shortdeck) ==
+  test "proper rank short" do
+    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"9", "s"}, {"A", "s"}], :short) ==
              {6, :nine_high_straight_flush}
 
-    assert P.rank([{"6", "s"}, {"7", "c"}, {"8", "s"}, {"9", "s"}, {"A", "s"}], :shortdeck) ==
+    assert P.rank([{"6", "s"}, {"7", "c"}, {"8", "s"}, {"9", "s"}, {"A", "s"}], :short) ==
              {276, :nine_high_straight}
 
-    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"9", "s"}, {"J", "c"}], :shortdeck) ==
+    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"9", "s"}, {"J", "c"}], :short) ==
              {1404, :jack_high}
 
-    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"9", "s"}, {"Q", "s"}], :shortdeck) ==
+    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"9", "s"}, {"Q", "s"}], :short) ==
              {194, :queen_high_flush}
 
-    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"Q", "s"}, {"T", "s"}], :shortdeck) ==
+    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"Q", "s"}, {"T", "s"}], :short) ==
              {193, :queen_high_flush}
 
-    assert P.rank([{"6", "s"}, {"6", "c"}, {"6", "d"}, {"7", "s"}, {"7", "d"}], :shortdeck) ==
+    assert P.rank([{"6", "s"}, {"6", "c"}, {"6", "d"}, {"7", "s"}, {"7", "d"}], :short) ==
              {270, :sixes_full_over_sevens}
   end
 
@@ -55,12 +55,12 @@ defmodule MolaPoker5HighTest do
     assert P.rank([{"7", "s"}, {"3", "s"}, {"4", "s"}, {"5", "s"}, {"6", "d"}], :standard) ==
              :error
 
-    assert P.rank([{"2", "s"}, {"3", "s"}, {"4", "s"}, {"5", "s"}, {"A", "c"}], :shortdeck) ==
+    assert P.rank([{"2", "s"}, {"3", "s"}, {"4", "s"}, {"5", "s"}, {"A", "c"}], :short) ==
              :error
 
-    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"Q", "s"}], :shortdeck) == :error
+    assert P.rank([{"6", "s"}, {"7", "s"}, {"8", "s"}, {"Q", "s"}], :short) == :error
 
-    assert P.rank([{"7", "s"}, {"8", "s"}, {"6", "s"}, {"T", "s"}, {"Q", "d"}], :shortdeck) ==
+    assert P.rank([{"7", "s"}, {"8", "s"}, {"6", "s"}, {"T", "s"}, {"Q", "d"}], :short) ==
              :error
 
     assert_raise(UndefinedFunctionError, fn ->

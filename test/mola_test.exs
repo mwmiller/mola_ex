@@ -72,14 +72,14 @@ defmodule MolaTest do
              [{"hero", 1605, :nine_high_straight}, {"villian", 1608, :six_high_straight}]
   end
 
-  test "shortdeck" do
+  test "short" do
     assert Mola.ranked_high_hands(
              [
                {"hero", "8s 7s"},
                {"villian", "Ad Qh"}
              ],
              "Ac 9s 6s Ah Qs",
-             deck: :shortdeck
+             deck: :short
            ) ==
              [{"hero", 194, :queen_high_flush}, {"villian", 200, :aces_full_over_queens}]
 
@@ -89,7 +89,7 @@ defmodule MolaTest do
                {"villian", "Ad Ah 6h 6c"}
              ],
              "Ac 9s 6s Ah Qs",
-             deck: :shortdeck,
+             deck: :short,
              hand_selection: :omaha
            ) ==
              [{"villian", 8, :four_aces}, {"hero", 276, :nine_high_straight}]

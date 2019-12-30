@@ -1,5 +1,5 @@
 defmodule Mola.Poker5High do
-  for {which, file} <- [{:standard, "poker_high_52_5.tsv"}, {:shortdeck, "poker_high_36_5.tsv"}] do
+  for {which, file} <- [{:standard, "poker_high_52_5.tsv"}, {:short, "poker_high_36_5.tsv"}] do
     for vals <-
           File.read!(Application.app_dir(:mola, "priv/" <> file))
           |> String.split("\n", trim: true) do
