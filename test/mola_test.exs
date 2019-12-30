@@ -47,7 +47,7 @@ defmodule MolaTest do
     assert Mola.ranked_high_hands(
              [{"hero", "9c 8c As Jh"}, {"villian", "Ad Ah Kd Kh"}],
              "Ac Kc Qc Jc Tc",
-             :omaha
+             hand_selection: :omaha
            ) ==
              [{"hero", 3, :queen_high_straight_flush}, {"villian", 1600, :ace_high_straight}]
 
@@ -57,7 +57,7 @@ defmodule MolaTest do
                {"villian", "Ad Ah Tc 9c"}
              ],
              "Ac Kc Qc Jc Jh",
-             :omaha
+             hand_selection: :omaha
            ) ==
              [{"villian", 2, :king_high_straight_flush}, {"hero", 47, :four_jacks}]
 
@@ -67,8 +67,31 @@ defmodule MolaTest do
                {"villian", "Ad Kh 3c 4h"}
              ],
              "Ac 9d 6s 5h 2s",
-             :omaha
+             hand_selection: :omaha
            ) ==
              [{"hero", 1605, :nine_high_straight}, {"villian", 1608, :six_high_straight}]
+  end
+
+  test "shortdeck" do
+    assert Mola.ranked_high_hands(
+             [
+               {"hero", "8s 7s"},
+               {"villian", "Ad Qh"}
+             ],
+             "Ac 9s 6s Ah Qs",
+             deck: :shortdeck
+           ) ==
+             [{"hero", 194, :queen_high_flush}, {"villian", 200, :aces_full_over_queens}]
+
+    assert Mola.ranked_high_hands(
+             [
+               {"hero", "Kc 9s 8c 7s"},
+               {"villian", "Ad Ah 6h 6c"}
+             ],
+             "Ac 9s 6s Ah Qs",
+             deck: :shortdeck,
+             hand_selection: :omaha
+           ) ==
+             [{"villian", 8, :four_aces}, {"hero", 276, :nine_high_straight}]
   end
 end

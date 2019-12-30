@@ -41,8 +41,10 @@ defmodule Mola.Poker5High do
     def rank(_, unquote(which)), do: :error
 
     def rank_tuple({desc, cards}, unquote(which)) do
-      {rank, hand} = cards |> Enum.sort_by(&elem(&1, 0)) |> rank(unquote(which))
-      {desc, rank, hand}
+      case cards |> Enum.sort_by(&elem(&1, 0)) |> rank(unquote(which)) do
+        {rank, hand} -> {desc, rank, hand}
+        :error -> :error
+      end
     end
   end
 end

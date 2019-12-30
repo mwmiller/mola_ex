@@ -14,22 +14,20 @@ defmodule Mola do
   As long as the cards to hand selection rules are the same, the evaluators should work for
   less popular variants.
 
-  - Omit community cards for games with only personal cards.
-  - :holdem for games with selection among all community and personal cards
-  - :omaha for games with 3 board and 2 personal cards
-
   As such, wider boards (with 6 community cards), Pineapple-style (3 personal card
   hold 'em), 8-card stud, and Big-O-ish high (5 personal card Omaha) are all supported.
   Community card (board) games can even vary both.
   """
 
   @doc """
-  Compare 5 card high poker hands from all personal cards
+  Compare 5 card high poker hands
   Selects best 5 cards for each player and then orders players
   Supply:
     - a list of {description, cards} tuples for comparison
     - a list of community cards, if applicable.
-    - a selection strategy atom (:holdem or :omaha)
+    - an options keyword list:
+      - hand_selection: (:any, :omaha), defaults to :any
+      - deck: (:standard, :shortdeck), defaults to :standard
 
   Returns a sorted list of tuples: [{description, rank, :hand_descriptor}]
 
@@ -48,30 +46,44 @@ defmodule Mola do
     {"P2", 1144, :king_high_flush},
     {"P1", 5519, :pair_of_fives}
   ]
-  # Defaults to :holdem
+  # Defaults to hand_selection: :any, deck: :standard
   iex> Mola.ranked_high_hands([{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}], "Ac 2c 3h Td 3c")
   [
     {"BB", 10, :five_high_straight_flush},
     {"CO", 143, :four_treys},
     {"UTG", 177, :aces_full_over_treys}
   ]
-  iex> Mola.ranked_high_hands([{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}], "Ac 2c Td Jd 3c", :omaha)
+  iex> Mola.ranked_high_hands([{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}], "Ac 2c Td Jd 3c", hand_selection: :omaha)
   [
     {"CO", 655, :ace_high_flush},
     {"BB", 746, :ace_high_flush},
     {"UTG", 1631, :three_aces}
   ]
+  iex(2)> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "Ad Ah"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :shortdeck)
+  [
+    {"BB", 6, :nine_high_straight_flush},
+    {"CO", 55, :four_eights},
+    {"UTG", 204, :aces_full_over_eights}
+  ]
   """
-  def ranked_high_hands(hands, community \\ [], selection \\ :holdem)
+  def ranked_high_hands(hands, community \\ [], opts \\ [])
 
-  def ranked_high_hands(hands, [], _) do
+  def ranked_high_hands(hands, community, opts) do
+    {select, deck} =
+      {Keyword.get(opts, :hand_selection, :any), Keyword.get(opts, :deck, :standard)}
+
+    do_ranking(hands, community, select, deck)
+  end
+
+  defp do_ranking(hands, [], _, deck) do
     hands
     |> Enum.map(&normalize_hand/1)
-    |> Enum.map(&best5ofpile/1)
+    |> Enum.map(fn h -> best5ofpile(h, deck) end)
+    |> Enum.reject(fn {_, _, hd} -> hd == :error end)
     |> Enum.sort_by(&elem(&1, 1))
   end
 
-  def ranked_high_hands(hands, community, :holdem) do
+  defp do_ranking(hands, community, :any, deck) do
     {_, common} = normalize_hand({"community", community})
 
     hands
@@ -79,10 +91,10 @@ defmodule Mola do
       {desc, cards} = normalize_hand(h)
       {desc, cards ++ common}
     end)
-    |> ranked_high_hands
+    |> do_ranking([], :any, deck)
   end
 
-  def ranked_high_hands(hands, community, :omaha) do
+  defp do_ranking(hands, community, :omaha, deck) do
     {_, common} = normalize_hand({"community", community})
     common_poss = comb(3, common)
 
@@ -94,21 +106,24 @@ defmodule Mola do
         common_poss
         |> build_full(comb(2, cards))
         |> Enum.map(fn p -> {desc, p} end)
-        |> ranked_high_hands
+        |> do_ranking([], :omaha, deck)
 
       best
     end)
     |> Enum.sort_by(&elem(&1, 1))
   end
 
-  defp best5ofpile({desc, pile}, which \\ :standard) do
-    [best | _] =
+  defp best5ofpile({desc, pile}, which) do
+    res =
       comb(5, pile)
       |> Enum.map(fn h -> Mola.Poker5High.rank_tuple({desc, h}, which) end)
       |> Enum.reject(fn h -> h == :error end)
       |> Enum.sort_by(&elem(&1, 1))
 
-    best
+    case res do
+      [best | _] -> best
+      [] -> {desc, 1_000_000, :error}
+    end
   end
 
   defp normalize_hand({_, hand} = full) when is_list(hand), do: full
@@ -122,19 +137,19 @@ defmodule Mola do
     {desc, cards}
   end
 
-  def comb(0, _), do: [[]]
-  def comb(_, []), do: []
+  defp comb(0, _), do: [[]]
+  defp comb(_, []), do: []
 
-  def comb(m, [h | t]) do
+  defp comb(m, [h | t]) do
     for(l <- comb(m - 1, t), do: [h | l]) ++ comb(m, t)
   end
 
-  def build_full(first, second, acc \\ [])
-  def build_full([], _, acc), do: acc
-  def build_full(_, [], acc), do: acc
-  def build_full([h | t], all, acc), do: build_full(t, all, acc ++ build_item(all, h, []))
+  defp build_full(first, second, acc \\ [])
+  defp build_full([], _, acc), do: acc
+  defp build_full(_, [], acc), do: acc
+  defp build_full([h | t], all, acc), do: build_full(t, all, acc ++ build_item(all, h, []))
 
-  def build_item([], _, acc), do: acc
-  def build_item(_, [], acc), do: acc
-  def build_item([h | t], i, acc), do: build_item(t, i, acc ++ [h ++ i])
+  defp build_item([], _, acc), do: acc
+  defp build_item(_, [], acc), do: acc
+  defp build_item([h | t], i, acc), do: build_item(t, i, acc ++ [h ++ i])
 end
