@@ -1,0 +1,1404 @@
+1	A K Q J T	SF	Royal Flush
+2	K Q J T 9	SF	King-High Straight Flush
+3	Q J T 9 8	SF	Queen-High Straight Flush
+4	J T 9 8 7	SF	Jack-High Straight Flush
+5	T 9 8 7 6	SF	Ten-High Straight Flush
+6	A 9 8 7 6	SF	Nine-High Straight Flush
+7	A A A A K	4K	Four Aces
+8	A A A A Q	4K	Four Aces
+9	A A A A J	4K	Four Aces
+10	A A A A T	4K	Four Aces
+11	A A A A 9	4K	Four Aces
+12	A A A A 8	4K	Four Aces
+13	A A A A 7	4K	Four Aces
+14	A A A A 6	4K	Four Aces
+15	K K K K A	4K	Four Kings
+16	K K K K Q	4K	Four Kings
+17	K K K K J	4K	Four Kings
+18	K K K K T	4K	Four Kings
+19	K K K K 9	4K	Four Kings
+20	K K K K 8	4K	Four Kings
+21	K K K K 7	4K	Four Kings
+22	K K K K 6	4K	Four Kings
+23	Q Q Q Q A	4K	Four Queens
+24	Q Q Q Q K	4K	Four Queens
+25	Q Q Q Q J	4K	Four Queens
+26	Q Q Q Q T	4K	Four Queens
+27	Q Q Q Q 9	4K	Four Queens
+28	Q Q Q Q 8	4K	Four Queens
+29	Q Q Q Q 7	4K	Four Queens
+30	Q Q Q Q 6	4K	Four Queens
+31	J J J J A	4K	Four Jacks
+32	J J J J K	4K	Four Jacks
+33	J J J J Q	4K	Four Jacks
+34	J J J J T	4K	Four Jacks
+35	J J J J 9	4K	Four Jacks
+36	J J J J 8	4K	Four Jacks
+37	J J J J 7	4K	Four Jacks
+38	J J J J 6	4K	Four Jacks
+39	T T T T A	4K	Four Tens
+40	T T T T K	4K	Four Tens
+41	T T T T Q	4K	Four Tens
+42	T T T T J	4K	Four Tens
+43	T T T T 9	4K	Four Tens
+44	T T T T 8	4K	Four Tens
+45	T T T T 7	4K	Four Tens
+46	T T T T 6	4K	Four Tens
+47	9 9 9 9 A	4K	Four Nines
+48	9 9 9 9 K	4K	Four Nines
+49	9 9 9 9 Q	4K	Four Nines
+50	9 9 9 9 J	4K	Four Nines
+51	9 9 9 9 T	4K	Four Nines
+52	9 9 9 9 8	4K	Four Nines
+53	9 9 9 9 7	4K	Four Nines
+54	9 9 9 9 6	4K	Four Nines
+55	8 8 8 8 A	4K	Four Eights
+56	8 8 8 8 K	4K	Four Eights
+57	8 8 8 8 Q	4K	Four Eights
+58	8 8 8 8 J	4K	Four Eights
+59	8 8 8 8 T	4K	Four Eights
+60	8 8 8 8 9	4K	Four Eights
+61	8 8 8 8 7	4K	Four Eights
+62	8 8 8 8 6	4K	Four Eights
+63	7 7 7 7 A	4K	Four Sevens
+64	7 7 7 7 K	4K	Four Sevens
+65	7 7 7 7 Q	4K	Four Sevens
+66	7 7 7 7 J	4K	Four Sevens
+67	7 7 7 7 T	4K	Four Sevens
+68	7 7 7 7 9	4K	Four Sevens
+69	7 7 7 7 8	4K	Four Sevens
+70	7 7 7 7 6	4K	Four Sevens
+71	6 6 6 6 A	4K	Four Sixes
+72	6 6 6 6 K	4K	Four Sixes
+73	6 6 6 6 Q	4K	Four Sixes
+74	6 6 6 6 J	4K	Four Sixes
+75	6 6 6 6 T	4K	Four Sixes
+76	6 6 6 6 9	4K	Four Sixes
+77	6 6 6 6 8	4K	Four Sixes
+78	6 6 6 6 7	4K	Four Sixes
+79	A K Q J 9	F	Ace-High Flush
+80	A K Q J 8	F	Ace-High Flush
+81	A K Q J 7	F	Ace-High Flush
+82	A K Q J 6	F	Ace-High Flush
+83	A K Q T 9	F	Ace-High Flush
+84	A K Q T 8	F	Ace-High Flush
+85	A K Q T 7	F	Ace-High Flush
+86	A K Q T 6	F	Ace-High Flush
+87	A K Q 9 8	F	Ace-High Flush
+88	A K Q 9 7	F	Ace-High Flush
+89	A K Q 9 6	F	Ace-High Flush
+90	A K Q 8 7	F	Ace-High Flush
+91	A K Q 8 6	F	Ace-High Flush
+92	A K Q 7 6	F	Ace-High Flush
+93	A K J T 9	F	Ace-High Flush
+94	A K J T 8	F	Ace-High Flush
+95	A K J T 7	F	Ace-High Flush
+96	A K J T 6	F	Ace-High Flush
+97	A K J 9 8	F	Ace-High Flush
+98	A K J 9 7	F	Ace-High Flush
+99	A K J 9 6	F	Ace-High Flush
+100	A K J 8 7	F	Ace-High Flush
+101	A K J 8 6	F	Ace-High Flush
+102	A K J 7 6	F	Ace-High Flush
+103	A K T 9 8	F	Ace-High Flush
+104	A K T 9 7	F	Ace-High Flush
+105	A K T 9 6	F	Ace-High Flush
+106	A K T 8 7	F	Ace-High Flush
+107	A K T 8 6	F	Ace-High Flush
+108	A K T 7 6	F	Ace-High Flush
+109	A K 9 8 7	F	Ace-High Flush
+110	A K 9 8 6	F	Ace-High Flush
+111	A K 9 7 6	F	Ace-High Flush
+112	A K 8 7 6	F	Ace-High Flush
+113	A Q J T 9	F	Ace-High Flush
+114	A Q J T 8	F	Ace-High Flush
+115	A Q J T 7	F	Ace-High Flush
+116	A Q J T 6	F	Ace-High Flush
+117	A Q J 9 8	F	Ace-High Flush
+118	A Q J 9 7	F	Ace-High Flush
+119	A Q J 9 6	F	Ace-High Flush
+120	A Q J 8 7	F	Ace-High Flush
+121	A Q J 8 6	F	Ace-High Flush
+122	A Q J 7 6	F	Ace-High Flush
+123	A Q T 9 8	F	Ace-High Flush
+124	A Q T 9 7	F	Ace-High Flush
+125	A Q T 9 6	F	Ace-High Flush
+126	A Q T 8 7	F	Ace-High Flush
+127	A Q T 8 6	F	Ace-High Flush
+128	A Q T 7 6	F	Ace-High Flush
+129	A Q 9 8 7	F	Ace-High Flush
+130	A Q 9 8 6	F	Ace-High Flush
+131	A Q 9 7 6	F	Ace-High Flush
+132	A Q 8 7 6	F	Ace-High Flush
+133	A J T 9 8	F	Ace-High Flush
+134	A J T 9 7	F	Ace-High Flush
+135	A J T 9 6	F	Ace-High Flush
+136	A J T 8 7	F	Ace-High Flush
+137	A J T 8 6	F	Ace-High Flush
+138	A J T 7 6	F	Ace-High Flush
+139	A J 9 8 7	F	Ace-High Flush
+140	A J 9 8 6	F	Ace-High Flush
+141	A J 9 7 6	F	Ace-High Flush
+142	A J 8 7 6	F	Ace-High Flush
+143	A T 9 8 7	F	Ace-High Flush
+144	A T 9 8 6	F	Ace-High Flush
+145	A T 9 7 6	F	Ace-High Flush
+146	A T 8 7 6	F	Ace-High Flush
+147	K Q J T 8	F	King-High Flush
+148	K Q J T 7	F	King-High Flush
+149	K Q J T 6	F	King-High Flush
+150	K Q J 9 8	F	King-High Flush
+151	K Q J 9 7	F	King-High Flush
+152	K Q J 9 6	F	King-High Flush
+153	K Q J 8 7	F	King-High Flush
+154	K Q J 8 6	F	King-High Flush
+155	K Q J 7 6	F	King-High Flush
+156	K Q T 9 8	F	King-High Flush
+157	K Q T 9 7	F	King-High Flush
+158	K Q T 9 6	F	King-High Flush
+159	K Q T 8 7	F	King-High Flush
+160	K Q T 8 6	F	King-High Flush
+161	K Q T 7 6	F	King-High Flush
+162	K Q 9 8 7	F	King-High Flush
+163	K Q 9 8 6	F	King-High Flush
+164	K Q 9 7 6	F	King-High Flush
+165	K Q 8 7 6	F	King-High Flush
+166	K J T 9 8	F	King-High Flush
+167	K J T 9 7	F	King-High Flush
+168	K J T 9 6	F	King-High Flush
+169	K J T 8 7	F	King-High Flush
+170	K J T 8 6	F	King-High Flush
+171	K J T 7 6	F	King-High Flush
+172	K J 9 8 7	F	King-High Flush
+173	K J 9 8 6	F	King-High Flush
+174	K J 9 7 6	F	King-High Flush
+175	K J 8 7 6	F	King-High Flush
+176	K T 9 8 7	F	King-High Flush
+177	K T 9 8 6	F	King-High Flush
+178	K T 9 7 6	F	King-High Flush
+179	K T 8 7 6	F	King-High Flush
+180	K 9 8 7 6	F	King-High Flush
+181	Q J T 9 7	F	Queen-High Flush
+182	Q J T 9 6	F	Queen-High Flush
+183	Q J T 8 7	F	Queen-High Flush
+184	Q J T 8 6	F	Queen-High Flush
+185	Q J T 7 6	F	Queen-High Flush
+186	Q J 9 8 7	F	Queen-High Flush
+187	Q J 9 8 6	F	Queen-High Flush
+188	Q J 9 7 6	F	Queen-High Flush
+189	Q J 8 7 6	F	Queen-High Flush
+190	Q T 9 8 7	F	Queen-High Flush
+191	Q T 9 8 6	F	Queen-High Flush
+192	Q T 9 7 6	F	Queen-High Flush
+193	Q T 8 7 6	F	Queen-High Flush
+194	Q 9 8 7 6	F	Queen-High Flush
+195	J T 9 8 6	F	Jack-High Flush
+196	J T 9 7 6	F	Jack-High Flush
+197	J T 8 7 6	F	Jack-High Flush
+198	J 9 8 7 6	F	Jack-High Flush
+199	A A A K K	FH	Aces Full over Kings
+200	A A A Q Q	FH	Aces Full over Queens
+201	A A A J J	FH	Aces Full over Jacks
+202	A A A T T	FH	Aces Full over Tens
+203	A A A 9 9	FH	Aces Full over Nines
+204	A A A 8 8	FH	Aces Full over Eights
+205	A A A 7 7	FH	Aces Full over Sevens
+206	A A A 6 6	FH	Aces Full over Sixes
+207	K K K A A	FH	Kings Full over Aces
+208	K K K Q Q	FH	Kings Full over Queens
+209	K K K J J	FH	Kings Full over Jacks
+210	K K K T T	FH	Kings Full over Tens
+211	K K K 9 9	FH	Kings Full over Nines
+212	K K K 8 8	FH	Kings Full over Eights
+213	K K K 7 7	FH	Kings Full over Sevens
+214	K K K 6 6	FH	Kings Full over Sixes
+215	Q Q Q A A	FH	Queens Full over Aces
+216	Q Q Q K K	FH	Queens Full over Kings
+217	Q Q Q J J	FH	Queens Full over Jacks
+218	Q Q Q T T	FH	Queens Full over Tens
+219	Q Q Q 9 9	FH	Queens Full over Nines
+220	Q Q Q 8 8	FH	Queens Full over Eights
+221	Q Q Q 7 7	FH	Queens Full over Sevens
+222	Q Q Q 6 6	FH	Queens Full over Sixes
+223	J J J A A	FH	Jacks Full over Aces
+224	J J J K K	FH	Jacks Full over Kings
+225	J J J Q Q	FH	Jacks Full over Queens
+226	J J J T T	FH	Jacks Full over Tens
+227	J J J 9 9	FH	Jacks Full over Nines
+228	J J J 8 8	FH	Jacks Full over Eights
+229	J J J 7 7	FH	Jacks Full over Sevens
+230	J J J 6 6	FH	Jacks Full over Sixes
+231	T T T A A	FH	Tens Full over Aces
+232	T T T K K	FH	Tens Full over Kings
+233	T T T Q Q	FH	Tens Full over Queens
+234	T T T J J	FH	Tens Full over Jacks
+235	T T T 9 9	FH	Tens Full over Nines
+236	T T T 8 8	FH	Tens Full over Eights
+237	T T T 7 7	FH	Tens Full over Sevens
+238	T T T 6 6	FH	Tens Full over Sixes
+239	9 9 9 A A	FH	Nines Full over Aces
+240	9 9 9 K K	FH	Nines Full over Kings
+241	9 9 9 Q Q	FH	Nines Full over Queens
+242	9 9 9 J J	FH	Nines Full over Jacks
+243	9 9 9 T T	FH	Nines Full over Tens
+244	9 9 9 8 8	FH	Nines Full over Eights
+245	9 9 9 7 7	FH	Nines Full over Sevens
+246	9 9 9 6 6	FH	Nines Full over Sixes
+247	8 8 8 A A	FH	Eights Full over Aces
+248	8 8 8 K K	FH	Eights Full over Kings
+249	8 8 8 Q Q	FH	Eights Full over Queens
+250	8 8 8 J J	FH	Eights Full over Jacks
+251	8 8 8 T T	FH	Eights Full over Tens
+252	8 8 8 9 9	FH	Eights Full over Nines
+253	8 8 8 7 7	FH	Eights Full over Sevens
+254	8 8 8 6 6	FH	Eights Full over Sixes
+255	7 7 7 A A	FH	Sevens Full over Aces
+256	7 7 7 K K	FH	Sevens Full over Kings
+257	7 7 7 Q Q	FH	Sevens Full over Queens
+258	7 7 7 J J	FH	Sevens Full over Jacks
+259	7 7 7 T T	FH	Sevens Full over Tens
+260	7 7 7 9 9	FH	Sevens Full over Nines
+261	7 7 7 8 8	FH	Sevens Full over Eights
+262	7 7 7 6 6	FH	Sevens Full over Sixes
+263	6 6 6 A A	FH	Sixes Full over Aces
+264	6 6 6 K K	FH	Sixes Full over Kings
+265	6 6 6 Q Q	FH	Sixes Full over Queens
+266	6 6 6 J J	FH	Sixes Full over Jacks
+267	6 6 6 T T	FH	Sixes Full over Tens
+268	6 6 6 9 9	FH	Sixes Full over Nines
+269	6 6 6 8 8	FH	Sixes Full over Eights
+270	6 6 6 7 7	FH	Sixes Full over Sevens
+271	A K Q J T	S	Ace-High Straight
+272	K Q J T 9	S	King-High Straight
+273	Q J T 9 8	S	Queen-High Straight
+274	J T 9 8 7	S	Jack-High Straight
+275	T 9 8 7 6	S	Ten-High Straight
+276	A 9 8 7 6	S	Nine-High Straight
+277	A A A K Q	3K	Three Aces
+278	A A A K J	3K	Three Aces
+279	A A A K T	3K	Three Aces
+280	A A A K 9	3K	Three Aces
+281	A A A K 8	3K	Three Aces
+282	A A A K 7	3K	Three Aces
+283	A A A K 6	3K	Three Aces
+284	A A A Q J	3K	Three Aces
+285	A A A Q T	3K	Three Aces
+286	A A A Q 9	3K	Three Aces
+287	A A A Q 8	3K	Three Aces
+288	A A A Q 7	3K	Three Aces
+289	A A A Q 6	3K	Three Aces
+290	A A A J T	3K	Three Aces
+291	A A A J 9	3K	Three Aces
+292	A A A J 8	3K	Three Aces
+293	A A A J 7	3K	Three Aces
+294	A A A J 6	3K	Three Aces
+295	A A A T 9	3K	Three Aces
+296	A A A T 8	3K	Three Aces
+297	A A A T 7	3K	Three Aces
+298	A A A T 6	3K	Three Aces
+299	A A A 9 8	3K	Three Aces
+300	A A A 9 7	3K	Three Aces
+301	A A A 9 6	3K	Three Aces
+302	A A A 8 7	3K	Three Aces
+303	A A A 8 6	3K	Three Aces
+304	A A A 7 6	3K	Three Aces
+305	K K K A Q	3K	Three Kings
+306	K K K A J	3K	Three Kings
+307	K K K A T	3K	Three Kings
+308	K K K A 9	3K	Three Kings
+309	K K K A 8	3K	Three Kings
+310	K K K A 7	3K	Three Kings
+311	K K K A 6	3K	Three Kings
+312	K K K Q J	3K	Three Kings
+313	K K K Q T	3K	Three Kings
+314	K K K Q 9	3K	Three Kings
+315	K K K Q 8	3K	Three Kings
+316	K K K Q 7	3K	Three Kings
+317	K K K Q 6	3K	Three Kings
+318	K K K J T	3K	Three Kings
+319	K K K J 9	3K	Three Kings
+320	K K K J 8	3K	Three Kings
+321	K K K J 7	3K	Three Kings
+322	K K K J 6	3K	Three Kings
+323	K K K T 9	3K	Three Kings
+324	K K K T 8	3K	Three Kings
+325	K K K T 7	3K	Three Kings
+326	K K K T 6	3K	Three Kings
+327	K K K 9 8	3K	Three Kings
+328	K K K 9 7	3K	Three Kings
+329	K K K 9 6	3K	Three Kings
+330	K K K 8 7	3K	Three Kings
+331	K K K 8 6	3K	Three Kings
+332	K K K 7 6	3K	Three Kings
+333	Q Q Q A K	3K	Three Queens
+334	Q Q Q A J	3K	Three Queens
+335	Q Q Q A T	3K	Three Queens
+336	Q Q Q A 9	3K	Three Queens
+337	Q Q Q A 8	3K	Three Queens
+338	Q Q Q A 7	3K	Three Queens
+339	Q Q Q A 6	3K	Three Queens
+340	Q Q Q K J	3K	Three Queens
+341	Q Q Q K T	3K	Three Queens
+342	Q Q Q K 9	3K	Three Queens
+343	Q Q Q K 8	3K	Three Queens
+344	Q Q Q K 7	3K	Three Queens
+345	Q Q Q K 6	3K	Three Queens
+346	Q Q Q J T	3K	Three Queens
+347	Q Q Q J 9	3K	Three Queens
+348	Q Q Q J 8	3K	Three Queens
+349	Q Q Q J 7	3K	Three Queens
+350	Q Q Q J 6	3K	Three Queens
+351	Q Q Q T 9	3K	Three Queens
+352	Q Q Q T 8	3K	Three Queens
+353	Q Q Q T 7	3K	Three Queens
+354	Q Q Q T 6	3K	Three Queens
+355	Q Q Q 9 8	3K	Three Queens
+356	Q Q Q 9 7	3K	Three Queens
+357	Q Q Q 9 6	3K	Three Queens
+358	Q Q Q 8 7	3K	Three Queens
+359	Q Q Q 8 6	3K	Three Queens
+360	Q Q Q 7 6	3K	Three Queens
+361	J J J A K	3K	Three Jacks
+362	J J J A Q	3K	Three Jacks
+363	J J J A T	3K	Three Jacks
+364	J J J A 9	3K	Three Jacks
+365	J J J A 8	3K	Three Jacks
+366	J J J A 7	3K	Three Jacks
+367	J J J A 6	3K	Three Jacks
+368	J J J K Q	3K	Three Jacks
+369	J J J K T	3K	Three Jacks
+370	J J J K 9	3K	Three Jacks
+371	J J J K 8	3K	Three Jacks
+372	J J J K 7	3K	Three Jacks
+373	J J J K 6	3K	Three Jacks
+374	J J J Q T	3K	Three Jacks
+375	J J J Q 9	3K	Three Jacks
+376	J J J Q 8	3K	Three Jacks
+377	J J J Q 7	3K	Three Jacks
+378	J J J Q 6	3K	Three Jacks
+379	J J J T 9	3K	Three Jacks
+380	J J J T 8	3K	Three Jacks
+381	J J J T 7	3K	Three Jacks
+382	J J J T 6	3K	Three Jacks
+383	J J J 9 8	3K	Three Jacks
+384	J J J 9 7	3K	Three Jacks
+385	J J J 9 6	3K	Three Jacks
+386	J J J 8 7	3K	Three Jacks
+387	J J J 8 6	3K	Three Jacks
+388	J J J 7 6	3K	Three Jacks
+389	T T T A K	3K	Three Tens
+390	T T T A Q	3K	Three Tens
+391	T T T A J	3K	Three Tens
+392	T T T A 9	3K	Three Tens
+393	T T T A 8	3K	Three Tens
+394	T T T A 7	3K	Three Tens
+395	T T T A 6	3K	Three Tens
+396	T T T K Q	3K	Three Tens
+397	T T T K J	3K	Three Tens
+398	T T T K 9	3K	Three Tens
+399	T T T K 8	3K	Three Tens
+400	T T T K 7	3K	Three Tens
+401	T T T K 6	3K	Three Tens
+402	T T T Q J	3K	Three Tens
+403	T T T Q 9	3K	Three Tens
+404	T T T Q 8	3K	Three Tens
+405	T T T Q 7	3K	Three Tens
+406	T T T Q 6	3K	Three Tens
+407	T T T J 9	3K	Three Tens
+408	T T T J 8	3K	Three Tens
+409	T T T J 7	3K	Three Tens
+410	T T T J 6	3K	Three Tens
+411	T T T 9 8	3K	Three Tens
+412	T T T 9 7	3K	Three Tens
+413	T T T 9 6	3K	Three Tens
+414	T T T 8 7	3K	Three Tens
+415	T T T 8 6	3K	Three Tens
+416	T T T 7 6	3K	Three Tens
+417	9 9 9 A K	3K	Three Nines
+418	9 9 9 A Q	3K	Three Nines
+419	9 9 9 A J	3K	Three Nines
+420	9 9 9 A T	3K	Three Nines
+421	9 9 9 A 8	3K	Three Nines
+422	9 9 9 A 7	3K	Three Nines
+423	9 9 9 A 6	3K	Three Nines
+424	9 9 9 K Q	3K	Three Nines
+425	9 9 9 K J	3K	Three Nines
+426	9 9 9 K T	3K	Three Nines
+427	9 9 9 K 8	3K	Three Nines
+428	9 9 9 K 7	3K	Three Nines
+429	9 9 9 K 6	3K	Three Nines
+430	9 9 9 Q J	3K	Three Nines
+431	9 9 9 Q T	3K	Three Nines
+432	9 9 9 Q 8	3K	Three Nines
+433	9 9 9 Q 7	3K	Three Nines
+434	9 9 9 Q 6	3K	Three Nines
+435	9 9 9 J T	3K	Three Nines
+436	9 9 9 J 8	3K	Three Nines
+437	9 9 9 J 7	3K	Three Nines
+438	9 9 9 J 6	3K	Three Nines
+439	9 9 9 T 8	3K	Three Nines
+440	9 9 9 T 7	3K	Three Nines
+441	9 9 9 T 6	3K	Three Nines
+442	9 9 9 8 7	3K	Three Nines
+443	9 9 9 8 6	3K	Three Nines
+444	9 9 9 7 6	3K	Three Nines
+445	8 8 8 A K	3K	Three Eights
+446	8 8 8 A Q	3K	Three Eights
+447	8 8 8 A J	3K	Three Eights
+448	8 8 8 A T	3K	Three Eights
+449	8 8 8 A 9	3K	Three Eights
+450	8 8 8 A 7	3K	Three Eights
+451	8 8 8 A 6	3K	Three Eights
+452	8 8 8 K Q	3K	Three Eights
+453	8 8 8 K J	3K	Three Eights
+454	8 8 8 K T	3K	Three Eights
+455	8 8 8 K 9	3K	Three Eights
+456	8 8 8 K 7	3K	Three Eights
+457	8 8 8 K 6	3K	Three Eights
+458	8 8 8 Q J	3K	Three Eights
+459	8 8 8 Q T	3K	Three Eights
+460	8 8 8 Q 9	3K	Three Eights
+461	8 8 8 Q 7	3K	Three Eights
+462	8 8 8 Q 6	3K	Three Eights
+463	8 8 8 J T	3K	Three Eights
+464	8 8 8 J 9	3K	Three Eights
+465	8 8 8 J 7	3K	Three Eights
+466	8 8 8 J 6	3K	Three Eights
+467	8 8 8 T 9	3K	Three Eights
+468	8 8 8 T 7	3K	Three Eights
+469	8 8 8 T 6	3K	Three Eights
+470	8 8 8 9 7	3K	Three Eights
+471	8 8 8 9 6	3K	Three Eights
+472	8 8 8 7 6	3K	Three Eights
+473	7 7 7 A K	3K	Three Sevens
+474	7 7 7 A Q	3K	Three Sevens
+475	7 7 7 A J	3K	Three Sevens
+476	7 7 7 A T	3K	Three Sevens
+477	7 7 7 A 9	3K	Three Sevens
+478	7 7 7 A 8	3K	Three Sevens
+479	7 7 7 A 6	3K	Three Sevens
+480	7 7 7 K Q	3K	Three Sevens
+481	7 7 7 K J	3K	Three Sevens
+482	7 7 7 K T	3K	Three Sevens
+483	7 7 7 K 9	3K	Three Sevens
+484	7 7 7 K 8	3K	Three Sevens
+485	7 7 7 K 6	3K	Three Sevens
+486	7 7 7 Q J	3K	Three Sevens
+487	7 7 7 Q T	3K	Three Sevens
+488	7 7 7 Q 9	3K	Three Sevens
+489	7 7 7 Q 8	3K	Three Sevens
+490	7 7 7 Q 6	3K	Three Sevens
+491	7 7 7 J T	3K	Three Sevens
+492	7 7 7 J 9	3K	Three Sevens
+493	7 7 7 J 8	3K	Three Sevens
+494	7 7 7 J 6	3K	Three Sevens
+495	7 7 7 T 9	3K	Three Sevens
+496	7 7 7 T 8	3K	Three Sevens
+497	7 7 7 T 6	3K	Three Sevens
+498	7 7 7 9 8	3K	Three Sevens
+499	7 7 7 9 6	3K	Three Sevens
+500	7 7 7 8 6	3K	Three Sevens
+501	6 6 6 A K	3K	Three Sixes
+502	6 6 6 A Q	3K	Three Sixes
+503	6 6 6 A J	3K	Three Sixes
+504	6 6 6 A T	3K	Three Sixes
+505	6 6 6 A 9	3K	Three Sixes
+506	6 6 6 A 8	3K	Three Sixes
+507	6 6 6 A 7	3K	Three Sixes
+508	6 6 6 K Q	3K	Three Sixes
+509	6 6 6 K J	3K	Three Sixes
+510	6 6 6 K T	3K	Three Sixes
+511	6 6 6 K 9	3K	Three Sixes
+512	6 6 6 K 8	3K	Three Sixes
+513	6 6 6 K 7	3K	Three Sixes
+514	6 6 6 Q J	3K	Three Sixes
+515	6 6 6 Q T	3K	Three Sixes
+516	6 6 6 Q 9	3K	Three Sixes
+517	6 6 6 Q 8	3K	Three Sixes
+518	6 6 6 Q 7	3K	Three Sixes
+519	6 6 6 J T	3K	Three Sixes
+520	6 6 6 J 9	3K	Three Sixes
+521	6 6 6 J 8	3K	Three Sixes
+522	6 6 6 J 7	3K	Three Sixes
+523	6 6 6 T 9	3K	Three Sixes
+524	6 6 6 T 8	3K	Three Sixes
+525	6 6 6 T 7	3K	Three Sixes
+526	6 6 6 9 8	3K	Three Sixes
+527	6 6 6 9 7	3K	Three Sixes
+528	6 6 6 8 7	3K	Three Sixes
+529	A A K K Q	2P	Aces and Kings
+530	A A K K J	2P	Aces and Kings
+531	A A K K T	2P	Aces and Kings
+532	A A K K 9	2P	Aces and Kings
+533	A A K K 8	2P	Aces and Kings
+534	A A K K 7	2P	Aces and Kings
+535	A A K K 6	2P	Aces and Kings
+536	A A Q Q K	2P	Aces and Queens
+537	A A Q Q J	2P	Aces and Queens
+538	A A Q Q T	2P	Aces and Queens
+539	A A Q Q 9	2P	Aces and Queens
+540	A A Q Q 8	2P	Aces and Queens
+541	A A Q Q 7	2P	Aces and Queens
+542	A A Q Q 6	2P	Aces and Queens
+543	A A J J K	2P	Aces and Jacks
+544	A A J J Q	2P	Aces and Jacks
+545	A A J J T	2P	Aces and Jacks
+546	A A J J 9	2P	Aces and Jacks
+547	A A J J 8	2P	Aces and Jacks
+548	A A J J 7	2P	Aces and Jacks
+549	A A J J 6	2P	Aces and Jacks
+550	A A T T K	2P	Aces and Tens
+551	A A T T Q	2P	Aces and Tens
+552	A A T T J	2P	Aces and Tens
+553	A A T T 9	2P	Aces and Tens
+554	A A T T 8	2P	Aces and Tens
+555	A A T T 7	2P	Aces and Tens
+556	A A T T 6	2P	Aces and Tens
+557	A A 9 9 K	2P	Aces and Nines
+558	A A 9 9 Q	2P	Aces and Nines
+559	A A 9 9 J	2P	Aces and Nines
+560	A A 9 9 T	2P	Aces and Nines
+561	A A 9 9 8	2P	Aces and Nines
+562	A A 9 9 7	2P	Aces and Nines
+563	A A 9 9 6	2P	Aces and Nines
+564	A A 8 8 K	2P	Aces and Eights
+565	A A 8 8 Q	2P	Aces and Eights
+566	A A 8 8 J	2P	Aces and Eights
+567	A A 8 8 T	2P	Aces and Eights
+568	A A 8 8 9	2P	Aces and Eights
+569	A A 8 8 7	2P	Aces and Eights
+570	A A 8 8 6	2P	Aces and Eights
+571	A A 7 7 K	2P	Aces and Sevens
+572	A A 7 7 Q	2P	Aces and Sevens
+573	A A 7 7 J	2P	Aces and Sevens
+574	A A 7 7 T	2P	Aces and Sevens
+575	A A 7 7 9	2P	Aces and Sevens
+576	A A 7 7 8	2P	Aces and Sevens
+577	A A 7 7 6	2P	Aces and Sevens
+578	A A 6 6 K	2P	Aces and Sixes
+579	A A 6 6 Q	2P	Aces and Sixes
+580	A A 6 6 J	2P	Aces and Sixes
+581	A A 6 6 T	2P	Aces and Sixes
+582	A A 6 6 9	2P	Aces and Sixes
+583	A A 6 6 8	2P	Aces and Sixes
+584	A A 6 6 7	2P	Aces and Sixes
+585	K K Q Q A	2P	Kings and Queens
+586	K K Q Q J	2P	Kings and Queens
+587	K K Q Q T	2P	Kings and Queens
+588	K K Q Q 9	2P	Kings and Queens
+589	K K Q Q 8	2P	Kings and Queens
+590	K K Q Q 7	2P	Kings and Queens
+591	K K Q Q 6	2P	Kings and Queens
+592	K K J J A	2P	Kings and Jacks
+593	K K J J Q	2P	Kings and Jacks
+594	K K J J T	2P	Kings and Jacks
+595	K K J J 9	2P	Kings and Jacks
+596	K K J J 8	2P	Kings and Jacks
+597	K K J J 7	2P	Kings and Jacks
+598	K K J J 6	2P	Kings and Jacks
+599	K K T T A	2P	Kings and Tens
+600	K K T T Q	2P	Kings and Tens
+601	K K T T J	2P	Kings and Tens
+602	K K T T 9	2P	Kings and Tens
+603	K K T T 8	2P	Kings and Tens
+604	K K T T 7	2P	Kings and Tens
+605	K K T T 6	2P	Kings and Tens
+606	K K 9 9 A	2P	Kings and Nines
+607	K K 9 9 Q	2P	Kings and Nines
+608	K K 9 9 J	2P	Kings and Nines
+609	K K 9 9 T	2P	Kings and Nines
+610	K K 9 9 8	2P	Kings and Nines
+611	K K 9 9 7	2P	Kings and Nines
+612	K K 9 9 6	2P	Kings and Nines
+613	K K 8 8 A	2P	Kings and Eights
+614	K K 8 8 Q	2P	Kings and Eights
+615	K K 8 8 J	2P	Kings and Eights
+616	K K 8 8 T	2P	Kings and Eights
+617	K K 8 8 9	2P	Kings and Eights
+618	K K 8 8 7	2P	Kings and Eights
+619	K K 8 8 6	2P	Kings and Eights
+620	K K 7 7 A	2P	Kings and Sevens
+621	K K 7 7 Q	2P	Kings and Sevens
+622	K K 7 7 J	2P	Kings and Sevens
+623	K K 7 7 T	2P	Kings and Sevens
+624	K K 7 7 9	2P	Kings and Sevens
+625	K K 7 7 8	2P	Kings and Sevens
+626	K K 7 7 6	2P	Kings and Sevens
+627	K K 6 6 A	2P	Kings and Sixes
+628	K K 6 6 Q	2P	Kings and Sixes
+629	K K 6 6 J	2P	Kings and Sixes
+630	K K 6 6 T	2P	Kings and Sixes
+631	K K 6 6 9	2P	Kings and Sixes
+632	K K 6 6 8	2P	Kings and Sixes
+633	K K 6 6 7	2P	Kings and Sixes
+634	Q Q J J A	2P	Queens and Jacks
+635	Q Q J J K	2P	Queens and Jacks
+636	Q Q J J T	2P	Queens and Jacks
+637	Q Q J J 9	2P	Queens and Jacks
+638	Q Q J J 8	2P	Queens and Jacks
+639	Q Q J J 7	2P	Queens and Jacks
+640	Q Q J J 6	2P	Queens and Jacks
+641	Q Q T T A	2P	Queens and Tens
+642	Q Q T T K	2P	Queens and Tens
+643	Q Q T T J	2P	Queens and Tens
+644	Q Q T T 9	2P	Queens and Tens
+645	Q Q T T 8	2P	Queens and Tens
+646	Q Q T T 7	2P	Queens and Tens
+647	Q Q T T 6	2P	Queens and Tens
+648	Q Q 9 9 A	2P	Queens and Nines
+649	Q Q 9 9 K	2P	Queens and Nines
+650	Q Q 9 9 J	2P	Queens and Nines
+651	Q Q 9 9 T	2P	Queens and Nines
+652	Q Q 9 9 8	2P	Queens and Nines
+653	Q Q 9 9 7	2P	Queens and Nines
+654	Q Q 9 9 6	2P	Queens and Nines
+655	Q Q 8 8 A	2P	Queens and Eights
+656	Q Q 8 8 K	2P	Queens and Eights
+657	Q Q 8 8 J	2P	Queens and Eights
+658	Q Q 8 8 T	2P	Queens and Eights
+659	Q Q 8 8 9	2P	Queens and Eights
+660	Q Q 8 8 7	2P	Queens and Eights
+661	Q Q 8 8 6	2P	Queens and Eights
+662	Q Q 7 7 A	2P	Queens and Sevens
+663	Q Q 7 7 K	2P	Queens and Sevens
+664	Q Q 7 7 J	2P	Queens and Sevens
+665	Q Q 7 7 T	2P	Queens and Sevens
+666	Q Q 7 7 9	2P	Queens and Sevens
+667	Q Q 7 7 8	2P	Queens and Sevens
+668	Q Q 7 7 6	2P	Queens and Sevens
+669	Q Q 6 6 A	2P	Queens and Sixes
+670	Q Q 6 6 K	2P	Queens and Sixes
+671	Q Q 6 6 J	2P	Queens and Sixes
+672	Q Q 6 6 T	2P	Queens and Sixes
+673	Q Q 6 6 9	2P	Queens and Sixes
+674	Q Q 6 6 8	2P	Queens and Sixes
+675	Q Q 6 6 7	2P	Queens and Sixes
+676	J J T T A	2P	Jacks and Tens
+677	J J T T K	2P	Jacks and Tens
+678	J J T T Q	2P	Jacks and Tens
+679	J J T T 9	2P	Jacks and Tens
+680	J J T T 8	2P	Jacks and Tens
+681	J J T T 7	2P	Jacks and Tens
+682	J J T T 6	2P	Jacks and Tens
+683	J J 9 9 A	2P	Jacks and Nines
+684	J J 9 9 K	2P	Jacks and Nines
+685	J J 9 9 Q	2P	Jacks and Nines
+686	J J 9 9 T	2P	Jacks and Nines
+687	J J 9 9 8	2P	Jacks and Nines
+688	J J 9 9 7	2P	Jacks and Nines
+689	J J 9 9 6	2P	Jacks and Nines
+690	J J 8 8 A	2P	Jacks and Eights
+691	J J 8 8 K	2P	Jacks and Eights
+692	J J 8 8 Q	2P	Jacks and Eights
+693	J J 8 8 T	2P	Jacks and Eights
+694	J J 8 8 9	2P	Jacks and Eights
+695	J J 8 8 7	2P	Jacks and Eights
+696	J J 8 8 6	2P	Jacks and Eights
+697	J J 7 7 A	2P	Jacks and Sevens
+698	J J 7 7 K	2P	Jacks and Sevens
+699	J J 7 7 Q	2P	Jacks and Sevens
+700	J J 7 7 T	2P	Jacks and Sevens
+701	J J 7 7 9	2P	Jacks and Sevens
+702	J J 7 7 8	2P	Jacks and Sevens
+703	J J 7 7 6	2P	Jacks and Sevens
+704	J J 6 6 A	2P	Jacks and Sixes
+705	J J 6 6 K	2P	Jacks and Sixes
+706	J J 6 6 Q	2P	Jacks and Sixes
+707	J J 6 6 T	2P	Jacks and Sixes
+708	J J 6 6 9	2P	Jacks and Sixes
+709	J J 6 6 8	2P	Jacks and Sixes
+710	J J 6 6 7	2P	Jacks and Sixes
+711	T T 9 9 A	2P	Tens and Nines
+712	T T 9 9 K	2P	Tens and Nines
+713	T T 9 9 Q	2P	Tens and Nines
+714	T T 9 9 J	2P	Tens and Nines
+715	T T 9 9 8	2P	Tens and Nines
+716	T T 9 9 7	2P	Tens and Nines
+717	T T 9 9 6	2P	Tens and Nines
+718	T T 8 8 A	2P	Tens and Eights
+719	T T 8 8 K	2P	Tens and Eights
+720	T T 8 8 Q	2P	Tens and Eights
+721	T T 8 8 J	2P	Tens and Eights
+722	T T 8 8 9	2P	Tens and Eights
+723	T T 8 8 7	2P	Tens and Eights
+724	T T 8 8 6	2P	Tens and Eights
+725	T T 7 7 A	2P	Tens and Sevens
+726	T T 7 7 K	2P	Tens and Sevens
+727	T T 7 7 Q	2P	Tens and Sevens
+728	T T 7 7 J	2P	Tens and Sevens
+729	T T 7 7 9	2P	Tens and Sevens
+730	T T 7 7 8	2P	Tens and Sevens
+731	T T 7 7 6	2P	Tens and Sevens
+732	T T 6 6 A	2P	Tens and Sixes
+733	T T 6 6 K	2P	Tens and Sixes
+734	T T 6 6 Q	2P	Tens and Sixes
+735	T T 6 6 J	2P	Tens and Sixes
+736	T T 6 6 9	2P	Tens and Sixes
+737	T T 6 6 8	2P	Tens and Sixes
+738	T T 6 6 7	2P	Tens and Sixes
+739	9 9 8 8 A	2P	Nines and Eights
+740	9 9 8 8 K	2P	Nines and Eights
+741	9 9 8 8 Q	2P	Nines and Eights
+742	9 9 8 8 J	2P	Nines and Eights
+743	9 9 8 8 T	2P	Nines and Eights
+744	9 9 8 8 7	2P	Nines and Eights
+745	9 9 8 8 6	2P	Nines and Eights
+746	9 9 7 7 A	2P	Nines and Sevens
+747	9 9 7 7 K	2P	Nines and Sevens
+748	9 9 7 7 Q	2P	Nines and Sevens
+749	9 9 7 7 J	2P	Nines and Sevens
+750	9 9 7 7 T	2P	Nines and Sevens
+751	9 9 7 7 8	2P	Nines and Sevens
+752	9 9 7 7 6	2P	Nines and Sevens
+753	9 9 6 6 A	2P	Nines and Sixes
+754	9 9 6 6 K	2P	Nines and Sixes
+755	9 9 6 6 Q	2P	Nines and Sixes
+756	9 9 6 6 J	2P	Nines and Sixes
+757	9 9 6 6 T	2P	Nines and Sixes
+758	9 9 6 6 8	2P	Nines and Sixes
+759	9 9 6 6 7	2P	Nines and Sixes
+760	8 8 7 7 A	2P	Eights and Sevens
+761	8 8 7 7 K	2P	Eights and Sevens
+762	8 8 7 7 Q	2P	Eights and Sevens
+763	8 8 7 7 J	2P	Eights and Sevens
+764	8 8 7 7 T	2P	Eights and Sevens
+765	8 8 7 7 9	2P	Eights and Sevens
+766	8 8 7 7 6	2P	Eights and Sevens
+767	8 8 6 6 A	2P	Eights and Sixes
+768	8 8 6 6 K	2P	Eights and Sixes
+769	8 8 6 6 Q	2P	Eights and Sixes
+770	8 8 6 6 J	2P	Eights and Sixes
+771	8 8 6 6 T	2P	Eights and Sixes
+772	8 8 6 6 9	2P	Eights and Sixes
+773	8 8 6 6 7	2P	Eights and Sixes
+774	7 7 6 6 A	2P	Sevens and Sixes
+775	7 7 6 6 K	2P	Sevens and Sixes
+776	7 7 6 6 Q	2P	Sevens and Sixes
+777	7 7 6 6 J	2P	Sevens and Sixes
+778	7 7 6 6 T	2P	Sevens and Sixes
+779	7 7 6 6 9	2P	Sevens and Sixes
+780	7 7 6 6 8	2P	Sevens and Sixes
+781	A A K Q J	1P	Pair of Aces
+782	A A K Q T	1P	Pair of Aces
+783	A A K Q 9	1P	Pair of Aces
+784	A A K Q 8	1P	Pair of Aces
+785	A A K Q 7	1P	Pair of Aces
+786	A A K Q 6	1P	Pair of Aces
+787	A A K J T	1P	Pair of Aces
+788	A A K J 9	1P	Pair of Aces
+789	A A K J 8	1P	Pair of Aces
+790	A A K J 7	1P	Pair of Aces
+791	A A K J 6	1P	Pair of Aces
+792	A A K T 9	1P	Pair of Aces
+793	A A K T 8	1P	Pair of Aces
+794	A A K T 7	1P	Pair of Aces
+795	A A K T 6	1P	Pair of Aces
+796	A A K 9 8	1P	Pair of Aces
+797	A A K 9 7	1P	Pair of Aces
+798	A A K 9 6	1P	Pair of Aces
+799	A A K 8 7	1P	Pair of Aces
+800	A A K 8 6	1P	Pair of Aces
+801	A A K 7 6	1P	Pair of Aces
+802	A A Q J T	1P	Pair of Aces
+803	A A Q J 9	1P	Pair of Aces
+804	A A Q J 8	1P	Pair of Aces
+805	A A Q J 7	1P	Pair of Aces
+806	A A Q J 6	1P	Pair of Aces
+807	A A Q T 9	1P	Pair of Aces
+808	A A Q T 8	1P	Pair of Aces
+809	A A Q T 7	1P	Pair of Aces
+810	A A Q T 6	1P	Pair of Aces
+811	A A Q 9 8	1P	Pair of Aces
+812	A A Q 9 7	1P	Pair of Aces
+813	A A Q 9 6	1P	Pair of Aces
+814	A A Q 8 7	1P	Pair of Aces
+815	A A Q 8 6	1P	Pair of Aces
+816	A A Q 7 6	1P	Pair of Aces
+817	A A J T 9	1P	Pair of Aces
+818	A A J T 8	1P	Pair of Aces
+819	A A J T 7	1P	Pair of Aces
+820	A A J T 6	1P	Pair of Aces
+821	A A J 9 8	1P	Pair of Aces
+822	A A J 9 7	1P	Pair of Aces
+823	A A J 9 6	1P	Pair of Aces
+824	A A J 8 7	1P	Pair of Aces
+825	A A J 8 6	1P	Pair of Aces
+826	A A J 7 6	1P	Pair of Aces
+827	A A T 9 8	1P	Pair of Aces
+828	A A T 9 7	1P	Pair of Aces
+829	A A T 9 6	1P	Pair of Aces
+830	A A T 8 7	1P	Pair of Aces
+831	A A T 8 6	1P	Pair of Aces
+832	A A T 7 6	1P	Pair of Aces
+833	A A 9 8 7	1P	Pair of Aces
+834	A A 9 8 6	1P	Pair of Aces
+835	A A 9 7 6	1P	Pair of Aces
+836	A A 8 7 6	1P	Pair of Aces
+837	K K A Q J	1P	Pair of Kings
+838	K K A Q T	1P	Pair of Kings
+839	K K A Q 9	1P	Pair of Kings
+840	K K A Q 8	1P	Pair of Kings
+841	K K A Q 7	1P	Pair of Kings
+842	K K A Q 6	1P	Pair of Kings
+843	K K A J T	1P	Pair of Kings
+844	K K A J 9	1P	Pair of Kings
+845	K K A J 8	1P	Pair of Kings
+846	K K A J 7	1P	Pair of Kings
+847	K K A J 6	1P	Pair of Kings
+848	K K A T 9	1P	Pair of Kings
+849	K K A T 8	1P	Pair of Kings
+850	K K A T 7	1P	Pair of Kings
+851	K K A T 6	1P	Pair of Kings
+852	K K A 9 8	1P	Pair of Kings
+853	K K A 9 7	1P	Pair of Kings
+854	K K A 9 6	1P	Pair of Kings
+855	K K A 8 7	1P	Pair of Kings
+856	K K A 8 6	1P	Pair of Kings
+857	K K A 7 6	1P	Pair of Kings
+858	K K Q J T	1P	Pair of Kings
+859	K K Q J 9	1P	Pair of Kings
+860	K K Q J 8	1P	Pair of Kings
+861	K K Q J 7	1P	Pair of Kings
+862	K K Q J 6	1P	Pair of Kings
+863	K K Q T 9	1P	Pair of Kings
+864	K K Q T 8	1P	Pair of Kings
+865	K K Q T 7	1P	Pair of Kings
+866	K K Q T 6	1P	Pair of Kings
+867	K K Q 9 8	1P	Pair of Kings
+868	K K Q 9 7	1P	Pair of Kings
+869	K K Q 9 6	1P	Pair of Kings
+870	K K Q 8 7	1P	Pair of Kings
+871	K K Q 8 6	1P	Pair of Kings
+872	K K Q 7 6	1P	Pair of Kings
+873	K K J T 9	1P	Pair of Kings
+874	K K J T 8	1P	Pair of Kings
+875	K K J T 7	1P	Pair of Kings
+876	K K J T 6	1P	Pair of Kings
+877	K K J 9 8	1P	Pair of Kings
+878	K K J 9 7	1P	Pair of Kings
+879	K K J 9 6	1P	Pair of Kings
+880	K K J 8 7	1P	Pair of Kings
+881	K K J 8 6	1P	Pair of Kings
+882	K K J 7 6	1P	Pair of Kings
+883	K K T 9 8	1P	Pair of Kings
+884	K K T 9 7	1P	Pair of Kings
+885	K K T 9 6	1P	Pair of Kings
+886	K K T 8 7	1P	Pair of Kings
+887	K K T 8 6	1P	Pair of Kings
+888	K K T 7 6	1P	Pair of Kings
+889	K K 9 8 7	1P	Pair of Kings
+890	K K 9 8 6	1P	Pair of Kings
+891	K K 9 7 6	1P	Pair of Kings
+892	K K 8 7 6	1P	Pair of Kings
+893	Q Q A K J	1P	Pair of Queens
+894	Q Q A K T	1P	Pair of Queens
+895	Q Q A K 9	1P	Pair of Queens
+896	Q Q A K 8	1P	Pair of Queens
+897	Q Q A K 7	1P	Pair of Queens
+898	Q Q A K 6	1P	Pair of Queens
+899	Q Q A J T	1P	Pair of Queens
+900	Q Q A J 9	1P	Pair of Queens
+901	Q Q A J 8	1P	Pair of Queens
+902	Q Q A J 7	1P	Pair of Queens
+903	Q Q A J 6	1P	Pair of Queens
+904	Q Q A T 9	1P	Pair of Queens
+905	Q Q A T 8	1P	Pair of Queens
+906	Q Q A T 7	1P	Pair of Queens
+907	Q Q A T 6	1P	Pair of Queens
+908	Q Q A 9 8	1P	Pair of Queens
+909	Q Q A 9 7	1P	Pair of Queens
+910	Q Q A 9 6	1P	Pair of Queens
+911	Q Q A 8 7	1P	Pair of Queens
+912	Q Q A 8 6	1P	Pair of Queens
+913	Q Q A 7 6	1P	Pair of Queens
+914	Q Q K J T	1P	Pair of Queens
+915	Q Q K J 9	1P	Pair of Queens
+916	Q Q K J 8	1P	Pair of Queens
+917	Q Q K J 7	1P	Pair of Queens
+918	Q Q K J 6	1P	Pair of Queens
+919	Q Q K T 9	1P	Pair of Queens
+920	Q Q K T 8	1P	Pair of Queens
+921	Q Q K T 7	1P	Pair of Queens
+922	Q Q K T 6	1P	Pair of Queens
+923	Q Q K 9 8	1P	Pair of Queens
+924	Q Q K 9 7	1P	Pair of Queens
+925	Q Q K 9 6	1P	Pair of Queens
+926	Q Q K 8 7	1P	Pair of Queens
+927	Q Q K 8 6	1P	Pair of Queens
+928	Q Q K 7 6	1P	Pair of Queens
+929	Q Q J T 9	1P	Pair of Queens
+930	Q Q J T 8	1P	Pair of Queens
+931	Q Q J T 7	1P	Pair of Queens
+932	Q Q J T 6	1P	Pair of Queens
+933	Q Q J 9 8	1P	Pair of Queens
+934	Q Q J 9 7	1P	Pair of Queens
+935	Q Q J 9 6	1P	Pair of Queens
+936	Q Q J 8 7	1P	Pair of Queens
+937	Q Q J 8 6	1P	Pair of Queens
+938	Q Q J 7 6	1P	Pair of Queens
+939	Q Q T 9 8	1P	Pair of Queens
+940	Q Q T 9 7	1P	Pair of Queens
+941	Q Q T 9 6	1P	Pair of Queens
+942	Q Q T 8 7	1P	Pair of Queens
+943	Q Q T 8 6	1P	Pair of Queens
+944	Q Q T 7 6	1P	Pair of Queens
+945	Q Q 9 8 7	1P	Pair of Queens
+946	Q Q 9 8 6	1P	Pair of Queens
+947	Q Q 9 7 6	1P	Pair of Queens
+948	Q Q 8 7 6	1P	Pair of Queens
+949	J J A K Q	1P	Pair of Jacks
+950	J J A K T	1P	Pair of Jacks
+951	J J A K 9	1P	Pair of Jacks
+952	J J A K 8	1P	Pair of Jacks
+953	J J A K 7	1P	Pair of Jacks
+954	J J A K 6	1P	Pair of Jacks
+955	J J A Q T	1P	Pair of Jacks
+956	J J A Q 9	1P	Pair of Jacks
+957	J J A Q 8	1P	Pair of Jacks
+958	J J A Q 7	1P	Pair of Jacks
+959	J J A Q 6	1P	Pair of Jacks
+960	J J A T 9	1P	Pair of Jacks
+961	J J A T 8	1P	Pair of Jacks
+962	J J A T 7	1P	Pair of Jacks
+963	J J A T 6	1P	Pair of Jacks
+964	J J A 9 8	1P	Pair of Jacks
+965	J J A 9 7	1P	Pair of Jacks
+966	J J A 9 6	1P	Pair of Jacks
+967	J J A 8 7	1P	Pair of Jacks
+968	J J A 8 6	1P	Pair of Jacks
+969	J J A 7 6	1P	Pair of Jacks
+970	J J K Q T	1P	Pair of Jacks
+971	J J K Q 9	1P	Pair of Jacks
+972	J J K Q 8	1P	Pair of Jacks
+973	J J K Q 7	1P	Pair of Jacks
+974	J J K Q 6	1P	Pair of Jacks
+975	J J K T 9	1P	Pair of Jacks
+976	J J K T 8	1P	Pair of Jacks
+977	J J K T 7	1P	Pair of Jacks
+978	J J K T 6	1P	Pair of Jacks
+979	J J K 9 8	1P	Pair of Jacks
+980	J J K 9 7	1P	Pair of Jacks
+981	J J K 9 6	1P	Pair of Jacks
+982	J J K 8 7	1P	Pair of Jacks
+983	J J K 8 6	1P	Pair of Jacks
+984	J J K 7 6	1P	Pair of Jacks
+985	J J Q T 9	1P	Pair of Jacks
+986	J J Q T 8	1P	Pair of Jacks
+987	J J Q T 7	1P	Pair of Jacks
+988	J J Q T 6	1P	Pair of Jacks
+989	J J Q 9 8	1P	Pair of Jacks
+990	J J Q 9 7	1P	Pair of Jacks
+991	J J Q 9 6	1P	Pair of Jacks
+992	J J Q 8 7	1P	Pair of Jacks
+993	J J Q 8 6	1P	Pair of Jacks
+994	J J Q 7 6	1P	Pair of Jacks
+995	J J T 9 8	1P	Pair of Jacks
+996	J J T 9 7	1P	Pair of Jacks
+997	J J T 9 6	1P	Pair of Jacks
+998	J J T 8 7	1P	Pair of Jacks
+999	J J T 8 6	1P	Pair of Jacks
+1000	J J T 7 6	1P	Pair of Jacks
+1001	J J 9 8 7	1P	Pair of Jacks
+1002	J J 9 8 6	1P	Pair of Jacks
+1003	J J 9 7 6	1P	Pair of Jacks
+1004	J J 8 7 6	1P	Pair of Jacks
+1005	T T A K Q	1P	Pair of Tens
+1006	T T A K J	1P	Pair of Tens
+1007	T T A K 9	1P	Pair of Tens
+1008	T T A K 8	1P	Pair of Tens
+1009	T T A K 7	1P	Pair of Tens
+1010	T T A K 6	1P	Pair of Tens
+1011	T T A Q J	1P	Pair of Tens
+1012	T T A Q 9	1P	Pair of Tens
+1013	T T A Q 8	1P	Pair of Tens
+1014	T T A Q 7	1P	Pair of Tens
+1015	T T A Q 6	1P	Pair of Tens
+1016	T T A J 9	1P	Pair of Tens
+1017	T T A J 8	1P	Pair of Tens
+1018	T T A J 7	1P	Pair of Tens
+1019	T T A J 6	1P	Pair of Tens
+1020	T T A 9 8	1P	Pair of Tens
+1021	T T A 9 7	1P	Pair of Tens
+1022	T T A 9 6	1P	Pair of Tens
+1023	T T A 8 7	1P	Pair of Tens
+1024	T T A 8 6	1P	Pair of Tens
+1025	T T A 7 6	1P	Pair of Tens
+1026	T T K Q J	1P	Pair of Tens
+1027	T T K Q 9	1P	Pair of Tens
+1028	T T K Q 8	1P	Pair of Tens
+1029	T T K Q 7	1P	Pair of Tens
+1030	T T K Q 6	1P	Pair of Tens
+1031	T T K J 9	1P	Pair of Tens
+1032	T T K J 8	1P	Pair of Tens
+1033	T T K J 7	1P	Pair of Tens
+1034	T T K J 6	1P	Pair of Tens
+1035	T T K 9 8	1P	Pair of Tens
+1036	T T K 9 7	1P	Pair of Tens
+1037	T T K 9 6	1P	Pair of Tens
+1038	T T K 8 7	1P	Pair of Tens
+1039	T T K 8 6	1P	Pair of Tens
+1040	T T K 7 6	1P	Pair of Tens
+1041	T T Q J 9	1P	Pair of Tens
+1042	T T Q J 8	1P	Pair of Tens
+1043	T T Q J 7	1P	Pair of Tens
+1044	T T Q J 6	1P	Pair of Tens
+1045	T T Q 9 8	1P	Pair of Tens
+1046	T T Q 9 7	1P	Pair of Tens
+1047	T T Q 9 6	1P	Pair of Tens
+1048	T T Q 8 7	1P	Pair of Tens
+1049	T T Q 8 6	1P	Pair of Tens
+1050	T T Q 7 6	1P	Pair of Tens
+1051	T T J 9 8	1P	Pair of Tens
+1052	T T J 9 7	1P	Pair of Tens
+1053	T T J 9 6	1P	Pair of Tens
+1054	T T J 8 7	1P	Pair of Tens
+1055	T T J 8 6	1P	Pair of Tens
+1056	T T J 7 6	1P	Pair of Tens
+1057	T T 9 8 7	1P	Pair of Tens
+1058	T T 9 8 6	1P	Pair of Tens
+1059	T T 9 7 6	1P	Pair of Tens
+1060	T T 8 7 6	1P	Pair of Tens
+1061	9 9 A K Q	1P	Pair of Nines
+1062	9 9 A K J	1P	Pair of Nines
+1063	9 9 A K T	1P	Pair of Nines
+1064	9 9 A K 8	1P	Pair of Nines
+1065	9 9 A K 7	1P	Pair of Nines
+1066	9 9 A K 6	1P	Pair of Nines
+1067	9 9 A Q J	1P	Pair of Nines
+1068	9 9 A Q T	1P	Pair of Nines
+1069	9 9 A Q 8	1P	Pair of Nines
+1070	9 9 A Q 7	1P	Pair of Nines
+1071	9 9 A Q 6	1P	Pair of Nines
+1072	9 9 A J T	1P	Pair of Nines
+1073	9 9 A J 8	1P	Pair of Nines
+1074	9 9 A J 7	1P	Pair of Nines
+1075	9 9 A J 6	1P	Pair of Nines
+1076	9 9 A T 8	1P	Pair of Nines
+1077	9 9 A T 7	1P	Pair of Nines
+1078	9 9 A T 6	1P	Pair of Nines
+1079	9 9 A 8 7	1P	Pair of Nines
+1080	9 9 A 8 6	1P	Pair of Nines
+1081	9 9 A 7 6	1P	Pair of Nines
+1082	9 9 K Q J	1P	Pair of Nines
+1083	9 9 K Q T	1P	Pair of Nines
+1084	9 9 K Q 8	1P	Pair of Nines
+1085	9 9 K Q 7	1P	Pair of Nines
+1086	9 9 K Q 6	1P	Pair of Nines
+1087	9 9 K J T	1P	Pair of Nines
+1088	9 9 K J 8	1P	Pair of Nines
+1089	9 9 K J 7	1P	Pair of Nines
+1090	9 9 K J 6	1P	Pair of Nines
+1091	9 9 K T 8	1P	Pair of Nines
+1092	9 9 K T 7	1P	Pair of Nines
+1093	9 9 K T 6	1P	Pair of Nines
+1094	9 9 K 8 7	1P	Pair of Nines
+1095	9 9 K 8 6	1P	Pair of Nines
+1096	9 9 K 7 6	1P	Pair of Nines
+1097	9 9 Q J T	1P	Pair of Nines
+1098	9 9 Q J 8	1P	Pair of Nines
+1099	9 9 Q J 7	1P	Pair of Nines
+1100	9 9 Q J 6	1P	Pair of Nines
+1101	9 9 Q T 8	1P	Pair of Nines
+1102	9 9 Q T 7	1P	Pair of Nines
+1103	9 9 Q T 6	1P	Pair of Nines
+1104	9 9 Q 8 7	1P	Pair of Nines
+1105	9 9 Q 8 6	1P	Pair of Nines
+1106	9 9 Q 7 6	1P	Pair of Nines
+1107	9 9 J T 8	1P	Pair of Nines
+1108	9 9 J T 7	1P	Pair of Nines
+1109	9 9 J T 6	1P	Pair of Nines
+1110	9 9 J 8 7	1P	Pair of Nines
+1111	9 9 J 8 6	1P	Pair of Nines
+1112	9 9 J 7 6	1P	Pair of Nines
+1113	9 9 T 8 7	1P	Pair of Nines
+1114	9 9 T 8 6	1P	Pair of Nines
+1115	9 9 T 7 6	1P	Pair of Nines
+1116	9 9 8 7 6	1P	Pair of Nines
+1117	8 8 A K Q	1P	Pair of Eights
+1118	8 8 A K J	1P	Pair of Eights
+1119	8 8 A K T	1P	Pair of Eights
+1120	8 8 A K 9	1P	Pair of Eights
+1121	8 8 A K 7	1P	Pair of Eights
+1122	8 8 A K 6	1P	Pair of Eights
+1123	8 8 A Q J	1P	Pair of Eights
+1124	8 8 A Q T	1P	Pair of Eights
+1125	8 8 A Q 9	1P	Pair of Eights
+1126	8 8 A Q 7	1P	Pair of Eights
+1127	8 8 A Q 6	1P	Pair of Eights
+1128	8 8 A J T	1P	Pair of Eights
+1129	8 8 A J 9	1P	Pair of Eights
+1130	8 8 A J 7	1P	Pair of Eights
+1131	8 8 A J 6	1P	Pair of Eights
+1132	8 8 A T 9	1P	Pair of Eights
+1133	8 8 A T 7	1P	Pair of Eights
+1134	8 8 A T 6	1P	Pair of Eights
+1135	8 8 A 9 7	1P	Pair of Eights
+1136	8 8 A 9 6	1P	Pair of Eights
+1137	8 8 A 7 6	1P	Pair of Eights
+1138	8 8 K Q J	1P	Pair of Eights
+1139	8 8 K Q T	1P	Pair of Eights
+1140	8 8 K Q 9	1P	Pair of Eights
+1141	8 8 K Q 7	1P	Pair of Eights
+1142	8 8 K Q 6	1P	Pair of Eights
+1143	8 8 K J T	1P	Pair of Eights
+1144	8 8 K J 9	1P	Pair of Eights
+1145	8 8 K J 7	1P	Pair of Eights
+1146	8 8 K J 6	1P	Pair of Eights
+1147	8 8 K T 9	1P	Pair of Eights
+1148	8 8 K T 7	1P	Pair of Eights
+1149	8 8 K T 6	1P	Pair of Eights
+1150	8 8 K 9 7	1P	Pair of Eights
+1151	8 8 K 9 6	1P	Pair of Eights
+1152	8 8 K 7 6	1P	Pair of Eights
+1153	8 8 Q J T	1P	Pair of Eights
+1154	8 8 Q J 9	1P	Pair of Eights
+1155	8 8 Q J 7	1P	Pair of Eights
+1156	8 8 Q J 6	1P	Pair of Eights
+1157	8 8 Q T 9	1P	Pair of Eights
+1158	8 8 Q T 7	1P	Pair of Eights
+1159	8 8 Q T 6	1P	Pair of Eights
+1160	8 8 Q 9 7	1P	Pair of Eights
+1161	8 8 Q 9 6	1P	Pair of Eights
+1162	8 8 Q 7 6	1P	Pair of Eights
+1163	8 8 J T 9	1P	Pair of Eights
+1164	8 8 J T 7	1P	Pair of Eights
+1165	8 8 J T 6	1P	Pair of Eights
+1166	8 8 J 9 7	1P	Pair of Eights
+1167	8 8 J 9 6	1P	Pair of Eights
+1168	8 8 J 7 6	1P	Pair of Eights
+1169	8 8 T 9 7	1P	Pair of Eights
+1170	8 8 T 9 6	1P	Pair of Eights
+1171	8 8 T 7 6	1P	Pair of Eights
+1172	8 8 9 7 6	1P	Pair of Eights
+1173	7 7 A K Q	1P	Pair of Sevens
+1174	7 7 A K J	1P	Pair of Sevens
+1175	7 7 A K T	1P	Pair of Sevens
+1176	7 7 A K 9	1P	Pair of Sevens
+1177	7 7 A K 8	1P	Pair of Sevens
+1178	7 7 A K 6	1P	Pair of Sevens
+1179	7 7 A Q J	1P	Pair of Sevens
+1180	7 7 A Q T	1P	Pair of Sevens
+1181	7 7 A Q 9	1P	Pair of Sevens
+1182	7 7 A Q 8	1P	Pair of Sevens
+1183	7 7 A Q 6	1P	Pair of Sevens
+1184	7 7 A J T	1P	Pair of Sevens
+1185	7 7 A J 9	1P	Pair of Sevens
+1186	7 7 A J 8	1P	Pair of Sevens
+1187	7 7 A J 6	1P	Pair of Sevens
+1188	7 7 A T 9	1P	Pair of Sevens
+1189	7 7 A T 8	1P	Pair of Sevens
+1190	7 7 A T 6	1P	Pair of Sevens
+1191	7 7 A 9 8	1P	Pair of Sevens
+1192	7 7 A 9 6	1P	Pair of Sevens
+1193	7 7 A 8 6	1P	Pair of Sevens
+1194	7 7 K Q J	1P	Pair of Sevens
+1195	7 7 K Q T	1P	Pair of Sevens
+1196	7 7 K Q 9	1P	Pair of Sevens
+1197	7 7 K Q 8	1P	Pair of Sevens
+1198	7 7 K Q 6	1P	Pair of Sevens
+1199	7 7 K J T	1P	Pair of Sevens
+1200	7 7 K J 9	1P	Pair of Sevens
+1201	7 7 K J 8	1P	Pair of Sevens
+1202	7 7 K J 6	1P	Pair of Sevens
+1203	7 7 K T 9	1P	Pair of Sevens
+1204	7 7 K T 8	1P	Pair of Sevens
+1205	7 7 K T 6	1P	Pair of Sevens
+1206	7 7 K 9 8	1P	Pair of Sevens
+1207	7 7 K 9 6	1P	Pair of Sevens
+1208	7 7 K 8 6	1P	Pair of Sevens
+1209	7 7 Q J T	1P	Pair of Sevens
+1210	7 7 Q J 9	1P	Pair of Sevens
+1211	7 7 Q J 8	1P	Pair of Sevens
+1212	7 7 Q J 6	1P	Pair of Sevens
+1213	7 7 Q T 9	1P	Pair of Sevens
+1214	7 7 Q T 8	1P	Pair of Sevens
+1215	7 7 Q T 6	1P	Pair of Sevens
+1216	7 7 Q 9 8	1P	Pair of Sevens
+1217	7 7 Q 9 6	1P	Pair of Sevens
+1218	7 7 Q 8 6	1P	Pair of Sevens
+1219	7 7 J T 9	1P	Pair of Sevens
+1220	7 7 J T 8	1P	Pair of Sevens
+1221	7 7 J T 6	1P	Pair of Sevens
+1222	7 7 J 9 8	1P	Pair of Sevens
+1223	7 7 J 9 6	1P	Pair of Sevens
+1224	7 7 J 8 6	1P	Pair of Sevens
+1225	7 7 T 9 8	1P	Pair of Sevens
+1226	7 7 T 9 6	1P	Pair of Sevens
+1227	7 7 T 8 6	1P	Pair of Sevens
+1228	7 7 9 8 6	1P	Pair of Sevens
+1229	6 6 A K Q	1P	Pair of Sixes
+1230	6 6 A K J	1P	Pair of Sixes
+1231	6 6 A K T	1P	Pair of Sixes
+1232	6 6 A K 9	1P	Pair of Sixes
+1233	6 6 A K 8	1P	Pair of Sixes
+1234	6 6 A K 7	1P	Pair of Sixes
+1235	6 6 A Q J	1P	Pair of Sixes
+1236	6 6 A Q T	1P	Pair of Sixes
+1237	6 6 A Q 9	1P	Pair of Sixes
+1238	6 6 A Q 8	1P	Pair of Sixes
+1239	6 6 A Q 7	1P	Pair of Sixes
+1240	6 6 A J T	1P	Pair of Sixes
+1241	6 6 A J 9	1P	Pair of Sixes
+1242	6 6 A J 8	1P	Pair of Sixes
+1243	6 6 A J 7	1P	Pair of Sixes
+1244	6 6 A T 9	1P	Pair of Sixes
+1245	6 6 A T 8	1P	Pair of Sixes
+1246	6 6 A T 7	1P	Pair of Sixes
+1247	6 6 A 9 8	1P	Pair of Sixes
+1248	6 6 A 9 7	1P	Pair of Sixes
+1249	6 6 A 8 7	1P	Pair of Sixes
+1250	6 6 K Q J	1P	Pair of Sixes
+1251	6 6 K Q T	1P	Pair of Sixes
+1252	6 6 K Q 9	1P	Pair of Sixes
+1253	6 6 K Q 8	1P	Pair of Sixes
+1254	6 6 K Q 7	1P	Pair of Sixes
+1255	6 6 K J T	1P	Pair of Sixes
+1256	6 6 K J 9	1P	Pair of Sixes
+1257	6 6 K J 8	1P	Pair of Sixes
+1258	6 6 K J 7	1P	Pair of Sixes
+1259	6 6 K T 9	1P	Pair of Sixes
+1260	6 6 K T 8	1P	Pair of Sixes
+1261	6 6 K T 7	1P	Pair of Sixes
+1262	6 6 K 9 8	1P	Pair of Sixes
+1263	6 6 K 9 7	1P	Pair of Sixes
+1264	6 6 K 8 7	1P	Pair of Sixes
+1265	6 6 Q J T	1P	Pair of Sixes
+1266	6 6 Q J 9	1P	Pair of Sixes
+1267	6 6 Q J 8	1P	Pair of Sixes
+1268	6 6 Q J 7	1P	Pair of Sixes
+1269	6 6 Q T 9	1P	Pair of Sixes
+1270	6 6 Q T 8	1P	Pair of Sixes
+1271	6 6 Q T 7	1P	Pair of Sixes
+1272	6 6 Q 9 8	1P	Pair of Sixes
+1273	6 6 Q 9 7	1P	Pair of Sixes
+1274	6 6 Q 8 7	1P	Pair of Sixes
+1275	6 6 J T 9	1P	Pair of Sixes
+1276	6 6 J T 8	1P	Pair of Sixes
+1277	6 6 J T 7	1P	Pair of Sixes
+1278	6 6 J 9 8	1P	Pair of Sixes
+1279	6 6 J 9 7	1P	Pair of Sixes
+1280	6 6 J 8 7	1P	Pair of Sixes
+1281	6 6 T 9 8	1P	Pair of Sixes
+1282	6 6 T 9 7	1P	Pair of Sixes
+1283	6 6 T 8 7	1P	Pair of Sixes
+1284	6 6 9 8 7	1P	Pair of Sixes
+1285	A K Q J 9	HC	Ace-High
+1286	A K Q J 8	HC	Ace-High
+1287	A K Q J 7	HC	Ace-High
+1288	A K Q J 6	HC	Ace-High
+1289	A K Q T 9	HC	Ace-High
+1290	A K Q T 8	HC	Ace-High
+1291	A K Q T 7	HC	Ace-High
+1292	A K Q T 6	HC	Ace-High
+1293	A K Q 9 8	HC	Ace-High
+1294	A K Q 9 7	HC	Ace-High
+1295	A K Q 9 6	HC	Ace-High
+1296	A K Q 8 7	HC	Ace-High
+1297	A K Q 8 6	HC	Ace-High
+1298	A K Q 7 6	HC	Ace-High
+1299	A K J T 9	HC	Ace-High
+1300	A K J T 8	HC	Ace-High
+1301	A K J T 7	HC	Ace-High
+1302	A K J T 6	HC	Ace-High
+1303	A K J 9 8	HC	Ace-High
+1304	A K J 9 7	HC	Ace-High
+1305	A K J 9 6	HC	Ace-High
+1306	A K J 8 7	HC	Ace-High
+1307	A K J 8 6	HC	Ace-High
+1308	A K J 7 6	HC	Ace-High
+1309	A K T 9 8	HC	Ace-High
+1310	A K T 9 7	HC	Ace-High
+1311	A K T 9 6	HC	Ace-High
+1312	A K T 8 7	HC	Ace-High
+1313	A K T 8 6	HC	Ace-High
+1314	A K T 7 6	HC	Ace-High
+1315	A K 9 8 7	HC	Ace-High
+1316	A K 9 8 6	HC	Ace-High
+1317	A K 9 7 6	HC	Ace-High
+1318	A K 8 7 6	HC	Ace-High
+1319	A Q J T 9	HC	Ace-High
+1320	A Q J T 8	HC	Ace-High
+1321	A Q J T 7	HC	Ace-High
+1322	A Q J T 6	HC	Ace-High
+1323	A Q J 9 8	HC	Ace-High
+1324	A Q J 9 7	HC	Ace-High
+1325	A Q J 9 6	HC	Ace-High
+1326	A Q J 8 7	HC	Ace-High
+1327	A Q J 8 6	HC	Ace-High
+1328	A Q J 7 6	HC	Ace-High
+1329	A Q T 9 8	HC	Ace-High
+1330	A Q T 9 7	HC	Ace-High
+1331	A Q T 9 6	HC	Ace-High
+1332	A Q T 8 7	HC	Ace-High
+1333	A Q T 8 6	HC	Ace-High
+1334	A Q T 7 6	HC	Ace-High
+1335	A Q 9 8 7	HC	Ace-High
+1336	A Q 9 8 6	HC	Ace-High
+1337	A Q 9 7 6	HC	Ace-High
+1338	A Q 8 7 6	HC	Ace-High
+1339	A J T 9 8	HC	Ace-High
+1340	A J T 9 7	HC	Ace-High
+1341	A J T 9 6	HC	Ace-High
+1342	A J T 8 7	HC	Ace-High
+1343	A J T 8 6	HC	Ace-High
+1344	A J T 7 6	HC	Ace-High
+1345	A J 9 8 7	HC	Ace-High
+1346	A J 9 8 6	HC	Ace-High
+1347	A J 9 7 6	HC	Ace-High
+1348	A J 8 7 6	HC	Ace-High
+1349	A T 9 8 7	HC	Ace-High
+1350	A T 9 8 6	HC	Ace-High
+1351	A T 9 7 6	HC	Ace-High
+1352	A T 8 7 6	HC	Ace-High
+1353	K Q J T 8	HC	King-High
+1354	K Q J T 7	HC	King-High
+1355	K Q J T 6	HC	King-High
+1356	K Q J 9 8	HC	King-High
+1357	K Q J 9 7	HC	King-High
+1358	K Q J 9 6	HC	King-High
+1359	K Q J 8 7	HC	King-High
+1360	K Q J 8 6	HC	King-High
+1361	K Q J 7 6	HC	King-High
+1362	K Q T 9 8	HC	King-High
+1363	K Q T 9 7	HC	King-High
+1364	K Q T 9 6	HC	King-High
+1365	K Q T 8 7	HC	King-High
+1366	K Q T 8 6	HC	King-High
+1367	K Q T 7 6	HC	King-High
+1368	K Q 9 8 7	HC	King-High
+1369	K Q 9 8 6	HC	King-High
+1370	K Q 9 7 6	HC	King-High
+1371	K Q 8 7 6	HC	King-High
+1372	K J T 9 8	HC	King-High
+1373	K J T 9 7	HC	King-High
+1374	K J T 9 6	HC	King-High
+1375	K J T 8 7	HC	King-High
+1376	K J T 8 6	HC	King-High
+1377	K J T 7 6	HC	King-High
+1378	K J 9 8 7	HC	King-High
+1379	K J 9 8 6	HC	King-High
+1380	K J 9 7 6	HC	King-High
+1381	K J 8 7 6	HC	King-High
+1382	K T 9 8 7	HC	King-High
+1383	K T 9 8 6	HC	King-High
+1384	K T 9 7 6	HC	King-High
+1385	K T 8 7 6	HC	King-High
+1386	K 9 8 7 6	HC	King-High
+1387	Q J T 9 7	HC	Queen-High
+1388	Q J T 9 6	HC	Queen-High
+1389	Q J T 8 7	HC	Queen-High
+1390	Q J T 8 6	HC	Queen-High
+1391	Q J T 7 6	HC	Queen-High
+1392	Q J 9 8 7	HC	Queen-High
+1393	Q J 9 8 6	HC	Queen-High
+1394	Q J 9 7 6	HC	Queen-High
+1395	Q J 8 7 6	HC	Queen-High
+1396	Q T 9 8 7	HC	Queen-High
+1397	Q T 9 8 6	HC	Queen-High
+1398	Q T 9 7 6	HC	Queen-High
+1399	Q T 8 7 6	HC	Queen-High
+1400	Q 9 8 7 6	HC	Queen-High
+1401	J T 9 8 6	HC	Jack-High
+1402	J T 9 7 6	HC	Jack-High
+1403	J T 8 7 6	HC	Jack-High
+1404	J 9 8 7 6	HC	Jack-High

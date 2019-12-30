@@ -101,10 +101,10 @@ defmodule Mola do
     |> Enum.sort_by(&elem(&1, 1))
   end
 
-  defp best5ofpile({desc, pile}) do
+  defp best5ofpile({desc, pile}, which \\ :standard) do
     [best | _] =
       comb(5, pile)
-      |> Enum.map(fn h -> Mola.PokerHigh525.rank_tuple({desc, h}) end)
+      |> Enum.map(fn h -> Mola.Poker5High.rank_tuple({desc, h}, which) end)
       |> Enum.reject(fn h -> h == :error end)
       |> Enum.sort_by(&elem(&1, 1))
 
