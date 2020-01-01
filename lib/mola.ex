@@ -69,10 +69,79 @@ defmodule Mola do
   def ranked_high_hands(hands, community \\ [], opts \\ [])
 
   def ranked_high_hands(hands, community, opts) do
-    {select, deck} =
-      {Keyword.get(opts, :hand_selection, :any), Keyword.get(opts, :deck, :standard)}
+    {select, deck, _, _} = parse_opts(opts)
 
     do_ranking(hands, community, select, deck)
+  end
+
+  defp parse_opts(opts) do
+    {hs, d, tbd} =
+      {Keyword.get(opts, :hand_selection, :any), Keyword.get(opts, :deck, :standard),
+       Keyword.get(opts, :deal, community: 0, personal: 0)}
+
+    {c, p} = {Keyword.get(tbd, :community, 0), Keyword.get(tbd, :personal, 0)}
+
+    {hs, d, c, p}
+  end
+
+  @doc """
+  Enumerates possible wins going word and returns a winer percentage for each supplied hand
+  Supply `community` for board games and `seen` for any additional exposed cards
+
+  Options are as per `ranked_high_hands` with an additional keyword list.
+  Defaults to:
+  - deal: [community: 0, personal: 0]
+  """
+
+  def equity(hands, community \\ [], seen \\ [], opts \\ [])
+
+  def equity(hands, community, seen, opts) do
+    {_, deck, _, tbdp} = parsed = parse_opts(opts)
+    nhands = Enum.map(hands, &normalize_hand/1)
+    ncomm = normalize_hand(community)
+    nseen = normalize_hand(seen)
+
+    remain =
+      [ncomm, nseen | nhands]
+      |> Enum.reduce(Mola.Poker5High.full_deck(deck), fn {_, c}, d -> d -- c end)
+
+    case tbdp do
+      0 -> board_winners(nhands, ncomm, remain, parsed)
+      _ -> :unimplemented
+    end
+  end
+
+  defp board_winners(hands, ncomm, remain, {selection, deck, tbdc, _}) do
+    {cd, common} = ncomm
+
+    tbdc
+    |> comb(remain)
+    |> Enum.map(fn dealt -> hands |> do_ranking({cd, common ++ dealt}, selection, deck) end)
+    |> tabulate_results
+  end
+
+  defp tabulate_results(winners, acc \\ %{})
+
+  defp tabulate_results([], acc) do
+    ways = acc |> Map.values() |> Enum.sum()
+
+    acc
+    |> Enum.reduce([], fn {k, v}, a -> [{k, Float.round(100 * v / ways, 2)} | a] end)
+    |> Enum.sort_by(&elem(&1, 1), &>=/2)
+  end
+
+  defp tabulate_results([[] | t], acc), do: tabulate_results(t, acc)
+
+  defp tabulate_results([h | t], acc) do
+    {_, top_score, _} = h |> List.first()
+
+    winner_key =
+      h
+      |> Enum.filter(fn {_, s, _} -> s == top_score end)
+      |> Enum.map(fn {d, _, _} -> d end)
+      |> Enum.join("=")
+
+    tabulate_results(t, Map.update(acc, winner_key, 1, fn s -> s + 1 end))
   end
 
   defp do_ranking(hands, [], _, deck) do
@@ -84,7 +153,7 @@ defmodule Mola do
   end
 
   defp do_ranking(hands, community, :any, deck) do
-    {_, common} = normalize_hand({"community", community})
+    {_, common} = normalize_hand(community)
 
     hands
     |> Enum.map(fn h ->
@@ -95,7 +164,7 @@ defmodule Mola do
   end
 
   defp do_ranking(hands, community, :omaha, deck) do
-    {_, common} = normalize_hand({"community", community})
+    {_, common} = normalize_hand(community)
     common_poss = comb(3, common)
 
     hands
@@ -126,6 +195,7 @@ defmodule Mola do
     end
   end
 
+  defp normalize_hand(full) when not is_tuple(full), do: normalize_hand({"placeholder", full})
   defp normalize_hand({_, hand} = full) when is_list(hand), do: full
 
   defp normalize_hand({desc, hand}) when is_binary(hand) do
