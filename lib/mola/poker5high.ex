@@ -1,5 +1,9 @@
 defmodule Mola.Poker5High do
-  for {which, file} <- [{:standard, "poker_high_52_5.tsv"}, {:short, "poker_high_36_5.tsv"}] do
+  for {which, file, ranks} <- [
+        {:standard, "poker_high_52_5.tsv",
+         ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]},
+        {:short, "poker_high_36_5.tsv", ["6", "7", "8", "9", "T", "J", "Q", "K", "A"]}
+      ] do
     for vals <-
           File.read!(Application.app_dir(:mola, "priv/" <> file))
           |> String.split("\n", trim: true) do
@@ -46,5 +50,9 @@ defmodule Mola.Poker5High do
         :error -> :error
       end
     end
+
+    # This works up until the point where decks add or remove suits
+    deck = ranks |> Enum.reduce([], fn r, a -> [{r, "c"}, {r, "d"}, {r, "h"}, {r, "s"} | a] end)
+    def full_deck(unquote(which)), do: unquote(deck)
   end
 end

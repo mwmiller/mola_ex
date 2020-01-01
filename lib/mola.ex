@@ -4,7 +4,7 @@ defmodule Mola do
 
   No validation is done on the "sanity" of any combination of cards.
   Card rank should be "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"
-  Suits may be done however you wish, so long as consistent
+  Suits should be "c", "d", "h", "s"
 
   Cards should be a string: "Ac Kc Qc Jc Tc"
       or a list of tuples: [{"A", "c"}, {"K", "c"}, {"Q", "c"}, {"J", "c"}, {"T", "c"}]

@@ -3,6 +3,11 @@ defmodule MolaPoker5HighTest do
   doctest Mola.Poker5High
   alias Mola.Poker5High, as: P
 
+  test "deck sizes" do
+    assert P.full_deck(:standard) |> Enum.count() == 52
+    assert P.full_deck(:short) |> Enum.count() == 36
+  end
+
   test "proper rank standard" do
     assert P.rank([{"2", "s"}, {"3", "s"}, {"4", "s"}, {"5", "s"}, {"A", "c"}], :standard) ==
              {1609, :five_high_straight}
