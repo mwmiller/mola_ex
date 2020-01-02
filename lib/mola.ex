@@ -116,7 +116,9 @@ defmodule Mola do
 
     tbdc
     |> comb(remain)
-    |> Enum.map(fn dealt -> hands |> do_ranking({cd, common ++ dealt}, selection, deck) end)
+    |> Flow.from_enumerable()
+    |> Flow.map(fn dealt -> hands |> do_ranking({cd, common ++ dealt}, selection, deck) end)
+    |> Enum.to_list()
     |> tabulate_results
   end
 
