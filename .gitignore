@@ -24,3 +24,6 @@ mola-*.tar
 
 # Ignore vim temp files
 *.sw?
+
+# Ignore MacOS nonsense
+.DS_Store

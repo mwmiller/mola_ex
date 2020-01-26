@@ -6,25 +6,42 @@ defmodule Mola.MixProject do
       app: :mola,
       version: "0.1.0",
       elixir: "~> 1.9",
+      name: "excon",
+      source_url: "https://github.com/mwmiller/mola_ex",
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: []
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:credo, "~> 1.0", only: [:dev, :test]},
       {:earmark, "~> 1.0", only: :dev},
       {:ex_doc, "~> 0.14", only: :dev},
       {:flow, "~> 0.15"}
+    ]
+  end
+
+  defp description do
+    """
+    mola - poker high hand ranking and enumeration
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Matt Miller"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/mwmiller/mola_ex"}
     ]
   end
 end
