@@ -1,13 +1,13 @@
 defmodule Mola do
   @moduledoc """
-  Compare various hand strengths
+  Compare various poker hand strengths
 
   No validation is done on the "sanity" of any combination of cards.
   Card rank should be "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"
   Suits should be "c", "d", "h", "s"
 
   Cards should be a string: "Ac Kc Qc Jc Tc"
-      or a list of tuples: [{"A", "c"}, {"K", "c"}, {"Q", "c"}, {"J", "c"}, {"T", "c"}]
+  or a list of tuples: [{"A", "c"}, {"K", "c"}, {"Q", "c"}, {"J", "c"}, {"T", "c"}]
 
   Hands which cannot be evaluated are silently stripped from the results
 
@@ -17,6 +17,8 @@ defmodule Mola do
   As such, wider boards (with 6 community cards), Pineapple-style (3 personal card
   hold 'em), 8-card stud, and Big-O-ish high (5 personal card Omaha) are all supported.
   Community card (board) games can even vary both.
+
+  Please note that compilation can be very slow while providing very fast hand evaluation.
   """
 
   @doc """
@@ -33,38 +35,20 @@ defmodule Mola do
 
   ## Examples
 
-  # Defaults to all personal cards
-  iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s"}, {"P2", "2s 3s 4s 5s 6c"}, {"P3", "Ac As 7h 7c Kc"}])
-  [
-    {"P2", 1608, :six_high_straight},
-    {"P3", 2534, :aces_and_sevens},
-    {"P1", 7462, :seven_high}
-  ]
-  iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s 5d"}, {"P2", "2s 3s 4s 5s 6c Ks"}, {"P3", "Ac As 7h 7c Kc 7d"}])
-  [
-    {"P3", 251, :sevens_full_over_aces},
-    {"P2", 1144, :king_high_flush},
-    {"P1", 5519, :pair_of_fives}
-  ]
-  # Defaults to hand_selection: :any, deck: :standard
-  iex> Mola.ranked_high_hands([{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}], "Ac 2c 3h Td 3c")
-  [
-    {"BB", 10, :five_high_straight_flush},
-    {"CO", 143, :four_treys},
-    {"UTG", 177, :aces_full_over_treys}
-  ]
-  iex> Mola.ranked_high_hands([{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}], "Ac 2c Td Jd 3c", hand_selection: :omaha)
-  [
-    {"CO", 655, :ace_high_flush},
-    {"BB", 746, :ace_high_flush},
-    {"UTG", 1631, :three_aces}
-  ]
-  iex(2)> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "Ad Ah"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :short)
-  [
-    {"BB", 6, :nine_high_straight_flush},
-    {"CO", 55, :four_eights},
-    {"UTG", 204, :aces_full_over_eights}
-  ]
+      iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s"}, {"P2", "2s 3s 4s 5s 6c"}, {"P3", "Ac As 7h 7c Kc"}])
+      [ {"P2", 1608, :six_high_straight}, {"P3", 2534, :aces_and_sevens}, {"P1", 7462, :seven_high} ]
+
+      iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s 5d"}, {"P2", "2s 3s 4s 5s 6c Ks"}, {"P3", "Ac As 7h 7c Kc 7d"}])
+      [ {"P3", 251, :sevens_full_over_aces}, {"P2", 1144, :king_high_flush}, {"P1", 5519, :pair_of_fives} ]
+
+      iex> Mola.ranked_high_hands([{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}], "Ac 2c 3h Td 3c")
+      [ {"BB", 10, :five_high_straight_flush}, {"CO", 143, :four_treys}, {"UTG", 177, :aces_full_over_treys} ]
+
+      iex> Mola.ranked_high_hands([{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}], "Ac 2c Td Jd 3c", hand_selection: :omaha)
+      [ {"CO", 655, :ace_high_flush}, {"BB", 746, :ace_high_flush}, {"UTG", 1631, :three_aces} ]
+
+      iex> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "Ad Ah"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :short)
+      [ {"BB", 6, :nine_high_straight_flush}, {"CO", 55, :four_eights}, {"UTG", 204, :aces_full_over_eights} ]
   """
   def ranked_high_hands(hands, community \\ [], opts \\ [])
 
@@ -85,12 +69,22 @@ defmodule Mola do
   end
 
   @doc """
-  Enumerates possible wins going word and returns a winer percentage for each supplied hand
+  Enumerates possible wins going word and returns a winner percentage for each supplied hand
   Supply `community` for board games and `seen` for any additional exposed cards
+
+  This does not enforce any rules on board or hand size.
 
   Options are as per `ranked_high_hands` with an additional keyword list.
   Defaults to:
   - deal: [community: 0, personal: 0]
+
+  Note that dealing additional personal cards is not yet implemented.
+
+  ## Examples
+
+      iex> Mola.equity([{"BB", "Ah Kh"}, {"CO", "Jd Td"}], "Ad Kd Ts", [], deal: [community: 2])
+      [{"BB", 51.92}, {"CO", 47.17}, {"BB=CO", 0.91}]
+
   """
 
   def equity(hands, community \\ [], seen \\ [], opts \\ [])

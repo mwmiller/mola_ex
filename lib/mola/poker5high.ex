@@ -1,4 +1,5 @@
 defmodule Mola.Poker5High do
+  @moduledoc false
   for {which, file, ranks} <- [
         {:standard, "poker_high_52_5.tsv",
          ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]},
