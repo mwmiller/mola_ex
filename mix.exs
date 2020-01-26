@@ -21,6 +21,9 @@ defmodule Mola.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:credo, "~> 1.0", only: [:dev, :test]},
+      {:earmark, "~> 1.0", only: :dev},
+      {:ex_doc, "~> 0.14", only: :dev},
       {:flow, "~> 0.15"}
     ]
   end
