@@ -6,7 +6,7 @@ defmodule Mola.MixProject do
       app: :mola,
       version: "0.1.0",
       elixir: "~> 1.9",
-      name: "excon",
+      name: "mola",
       source_url: "https://github.com/mwmiller/mola_ex",
       start_permanent: Mix.env() == :prod,
       description: description(),
