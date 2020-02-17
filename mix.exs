@@ -4,7 +4,7 @@ defmodule Mola.MixProject do
   def project do
     [
       app: :mola,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.9",
       name: "mola",
       source_url: "https://github.com/mwmiller/mola_ex",
@@ -26,7 +26,7 @@ defmodule Mola.MixProject do
       {:credo, "~> 1.0", only: [:dev, :test]},
       {:earmark, "~> 1.0", only: :dev},
       {:ex_doc, "~> 0.14", only: :dev},
-      {:flow, "~> 0.15"}
+      {:flow, "~> 1.0"}
     ]
   end
 
