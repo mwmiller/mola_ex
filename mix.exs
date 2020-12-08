@@ -23,9 +23,8 @@ defmodule Mola.MixProject do
 
   defp deps do
     [
-      {:credo, "~> 1.0", only: [:dev, :test]},
-      {:earmark, "~> 1.0", only: :dev},
-      {:ex_doc, "~> 0.14", only: :dev},
+      {:earmark, "~> 1.4", only: :dev},
+      {:ex_doc, "~> 0.23", only: :dev},
       {:flow, "~> 1.0"}
     ]
   end
