@@ -3,7 +3,7 @@ defmodule MolaTest do
   doctest Mola
 
   test "five card high" do
-    assert Mola.ranked_high_hands([{"mwm", "Ac As 5d 3c Kh"}, {"icydee", "Ah Ad Kc 4d 3d"}]) ==
+    assert Mola.ranked_high_hands([{"mwm", "🃑As5d3cKh"}, {"icydee", "Ah Ad Kc 4d 3d"}]) ==
              [
                {"mwm", 3376, :pair_of_aces},
                {"icydee", 3378, :pair_of_aces}

@@ -6,7 +6,10 @@ defmodule Mola do
   Card rank should be "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"
   Suits should be "c", "d", "h", "s"
 
-  Cards should be a string: "Ac Kc Qc Jc Tc"
+  Cards should be provided as a string:
+    - "Ac Kc Qc Jc Tc"
+    - "AcKcQcJcTc"
+    - "🃑🃞🃝🃛🃚"
   or a list of tuples: [{"A", "c"}, {"K", "c"}, {"Q", "c"}, {"J", "c"}, {"T", "c"}]
 
   Hands which cannot be evaluated are silently stripped from the results
@@ -41,13 +44,13 @@ defmodule Mola do
       iex> Mola.ranked_high_hands([{"P1", "2c 3c 4c 5c 7s 5d"}, {"P2", "2s 3s 4s 5s 6c Ks"}, {"P3", "Ac As 7h 7c Kc 7d"}])
       [ {"P3", 251, :sevens_full_over_aces}, {"P2", 1144, :king_high_flush}, {"P1", 5519, :pair_of_fives} ]
 
-      iex> Mola.ranked_high_hands([{"BB", "4c 5c"}, {"UTG", "Ad Ah"}, {"CO", "3d 3s"}], "Ac 2c 3h Td 3c")
+      iex> Mola.ranked_high_hands([{"BB", "🃔🃕"}, {"UTG", "AdAh"}, {"CO", "3d 3s"}], "Ac 2c 3h Td 3c")
       [ {"BB", 10, :five_high_straight_flush}, {"CO", 143, :four_treys}, {"UTG", 177, :aces_full_over_treys} ]
 
       iex> Mola.ranked_high_hands([{"BB", "4c 5d As Tc"}, {"UTG", "Ad Ah Th Ts"}, {"CO", "9c 3s Jc 8d"}], "Ac 2c Td Jd 3c", hand_selection: :omaha)
       [ {"CO", 655, :ace_high_flush}, {"BB", 746, :ace_high_flush}, {"UTG", 1631, :three_aces} ]
 
-      iex> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "Ad Ah"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :short)
+      iex> Mola.ranked_high_hands([{"BB", "7c 9c"}, {"UTG", "🃁🂱"}, {"CO", "8d 8s"}], "Ac 6c 8h Td 8c", deck: :short)
       [ {"BB", 6, :nine_high_straight_flush}, {"CO", 55, :four_eights}, {"UTG", 204, :aces_full_over_eights} ]
   """
   def ranked_high_hands(hands, community \\ [], opts \\ [])
@@ -195,12 +198,19 @@ defmodule Mola do
   defp normalize_hand({_, hand} = full) when is_list(hand), do: full
 
   defp normalize_hand({desc, hand}) when is_binary(hand) do
-    cards =
-      hand
-      |> String.split(" ", trim: true)
-      |> Enum.map(fn s -> s |> String.split("", trim: true) |> List.to_tuple() end)
+    {desc, read_cards(String.graphemes(hand), [])}
+  end
 
-    {desc, cards}
+  defp read_cards(cards, acc)
+  defp read_cards([], acc), do: Enum.reverse(acc)
+  defp read_cards([" " | t], acc), do: read_cards(t, acc)
+
+  defp read_cards([c | t], acc) when byte_size(c) > 1,
+    do: read_cards(t, [Mola.Unicard.tomola(c) | acc])
+
+  defp read_cards([r | t], acc) do
+    [s | rest] = t
+    read_cards(rest, [{r, s} | acc])
   end
 
   defp comb(0, _), do: [[]]
